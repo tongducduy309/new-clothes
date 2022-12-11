@@ -1,0 +1,67 @@
+body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 18px;
+}
+
+.section-heading-2 {
+    text-align: center;
+    margin: 40px;
+    font-size: 30px;
+}
+
+.content-section-2 {
+    text-align: center;
+    width: 66.6666666667%;
+    margin:0 auto;
+}
+
+.content-section-2 .color{
+    color:red;  
+    padding: 0 0 30px 0; 
+}
+
+.levent_300_1 img {
+    width: 400px;
+    height: 400px;
+}
+
+.picture{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 50px 0;
+}
+
+.content-section-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.content-section-3 p {
+    width: 1100px;
+    text-align: center;
+}
+
+.levent_300_2 img {
+    width: 400px;
+    height: 450px;
+}
+
+.levent_300_3 img {
+    width: 400px;
+    height: 400px;
+}
+
+.picture2{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 50px 0;
+}
+
+
+.content-section-3 p {
+    width: 1100px;
+    text-align: center;
+    font-size: 16px;
+}

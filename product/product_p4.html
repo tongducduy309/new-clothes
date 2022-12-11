@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <title>NEW CLOTHES</title>
+        <link rel="shortcut icon" type="image/png" href="../img/logo.png"/>
+        <script src="../vendor/vue.js"></script>
+        <link rel="stylesheet" href="../css/style_product.css">
+        <link href="../fonts/AlumniSansPinstripe.css" rel="stylesheet">
+        <link href="../fonts/YanoneKaffeesatz.css" rel="stylesheet">
+        <link rel="stylesheet" href="../vendor/aos.css" />
+        <script src="../vendor/aos.js"></script>
+        <link rel="stylesheet" href="../css/style_main.css">
+        <link rel="stylesheet" href="../css/now-ui-dashboard.css">
+    </head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="childOfPage"></div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+        <div class="background_option" id="background_option">
+            <div class="background_virtual" @click="clickBGVirtual"></div>
+            <div class="mainOP" id="mainOP">
+               <div class="cart">
+                    <div class="head">
+                        <h2>GIỎ HÀNG</h2>
+                        <h4 class="close" @click="clickClose">Đóng</h4>
+                    </div>
+                    <div class="list_item" id="list_item">
+        
+                    </div>
+                    <div class="pay">
+                        <main>
+                            <div class="info_bill">
+                                <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                                <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                                <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                            </div>
+                            <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                        </main>
+                    </div>
+               </div>
+            </div>
+        </div>
+
+        <div class="areaNavbar">
+            <div class="navb">
+                <div class="top">
+                    <img src="../img/New Clothes.gif" alt="" class="leftNav">
+                    <h2 class="centerNav"><a href="../index.html">new clothes</a></h2>
+                    <div class="rightNav">
+                        <div class="rightNav-left">
+                            <div class="areaSearch">
+                                <div class="search">
+                                    <input type="text" placeholder="Tìm kiếm" id="content">
+                                    <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="rightNav-right">
+                            <ul class="option" id="option">
+                                <li @click="clickProfile" id="buttonProfile"><i class="now-ui-icons users_single-02"></i></li>
+                                <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                                <li @click="clickLogout" id="buttonLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                            </ul>
+                            <span id="nameAccount"></span>
+                        </div>
+                    </div>
+                   
+                </div>
+                <ul class="menu" id="menu">
+                    <li ><a v-bind:href="aboutUs">Về chúng tôi</a></li>
+                    <li><a v-bind:href="shop">Cửa hàng</a></li>
+                    <li><a v-bind:href="sale">Giảm giá</a></li>
+                    <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                    <li><a v-bind:href="blog">Blog</a></li>
+                    <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                    <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+                </ul>
+            </div>
+        </div>    
+
+    
+    <div class="currentpath" data-aos="fade-left">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../shop.html">Sản phẩm</a>
+        <a href="" id="current">LEVENTS® INSIDE OUT TEE</a>
+    </div>
+    <div id="toast"></div>
+    <section class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7" id="imgMain">
+                    <img src="../img/products/p4-1.jpg" alt="">
+                    <img src="../img/products/p4-2.jpg" alt="" class="pic_hidden">
+                </div>
+                <input type="hidden" value="3" id="serial">
+                <div class="col-md-5">
+                    <h2 id="name">LEVENTS® INSIDE OUT TEE</h2>
+                    <div class="groupPrice">
+                        <h3 class="price">370000</h3>
+                        <h3 class="priceSale">390000</h3>
+                        <h3>vn&#8363</h3>
+                    </div>
+                    
+                    <h4 id="color">Màu sắc: TRẮNG</h4>
+                    <div class="listColor" id="listColor_pdt">
+                        
+                        <div class="itemColor" style="background-color:  var(--white);" @click="clickColor" value="0" aria-valuetext="TRẮNG"></div>
+                        <div class="itemColor" style="background-color:  var(--black);" @click="clickColor" value="1" aria-valuetext="ĐEN"></div>
+                    </div>
+                    <div class="countProduct">
+                        <h4>Số lượng: </h4>
+                        <li><i class="fa-solid fa-minus" @click="clickMinus"></i></li>
+                        <input type="text" v-model="value" min="min" max="max" readonly id="countProductInp">
+                        <li><i class="fa-solid fa-plus" @click="clickAdd"></i></li>
+                    </div>
+                    <div class="choiceSize">
+                        <h3>Size:</h3>
+                        <select name="" id="size">
+                            <option value="" >Chọn size</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            
+                        </select>
+                    </div>
+                    <div class="button effect-for-btn-2 addToCart"><p>Thêm vào giỏ</p></div>
+                    <div class="content infoProduct" @click="onClick">
+                        <h3>THÔNG TIN SẢN PHẨM</h3>
+                        <span id="contentInfo">LEVENTS® | DORAEMON FAMOUS CAT TEE
+                            <br>
+                            MATERIAL: LÌ VEN ORIGINAL - Phiên bản bề mặt vải không đổ lông mang cảm giác thoáng mát
+                            <br>
+                            SIZE: A/B/C/D
+                            <br>
+                            Sản phẩm thuộc Special Collection “Make everything popular” DORAEMON | LEVENTS®</span>
+                    </div>
+                    <div class="content guideSize" @click="onClick">
+                        <h3>QUY ƯỚC KÍCH THƯỚC</h3>
+                        <span id="contentGuide">Form áo được Fit size theo form và tiêu chuẩn tương đối của người Việt Nam, nếu bạn đang cân nhắc giữa hai size, nên chọn size lớn hơn.
+                            <ul>
+                                <li>Size A: Chiều cao từ 1m50 - 1m65, cân nặng trên 55kg</li>
+                                <li>Size B: Chiều cao từ 1m65 - 1m72, cân nặng dưới 65kg </li>
+                                <li>Size C: Chiều cao từ 1m70 - 1m77, cân nặng dưới 80kg </li>
+                                <li>Size D: Chiều cao trên 1m72, cân nặng dưới 95kg.</li>
+                            </ul>
+                            <img src="../img/SizeChart.jpg" alt="">
+                                                   
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="others">
+        <h2 class="title">Có thể bạn thích</h2>
+        <div class="swipe" id="swipe">
+            <div id="listProduct" class="listProduct">
+                    
+            </div>
+            
+        </div>
+        <div class="value"></div>
+    </section>
+    <footer class="container-fluid footer">
+        <div class="col-md-7 link-text">
+            <div class="information col-md-4">
+                <h6>THÔNG TIN CÔNG TY</h6>
+                <li><a v-bind:href = "aboutUs">Giới thiệu về NEW CLOTHES </a></li>
+            </div>
+            <div class="support col-md-4">
+                <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="policyMembership">Chính sách Membership</a></li>
+                <li><a v-bind:href="guideOrders">Hướng dẫn mua hàng</a></li>
+                <li><a v-bind:href="policyTransport">Chính sách vận chuyển</a></li>
+                <li><a v-bind:href="policyReturnsWarranty">Chính sách đổi trả & bảo hành</a></li>
+            </div>
+            <div class="services col-md-4">
+                <h6>DỊCH VỤ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="contactUs">Liên hệ chúng tôi</a></li>
+                <li><a v-bind:href="payments">Phương thức thanh toán</a></li>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="contact">
+                <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
+                <ul>
+                    <li><a v-bind:href="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a v-bind:href="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a v-bind:href="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+            <div class="sendMail">
+                <h6>ĐĂNG KÝ NHẬN EMAIL TỪ NEW CLOTHES</h6>
+                <div class="send col-md-12">
+                    <input type="email" class="value col-md-8" placeholder="Địa chỉ email của bạn" id="inputEmailFromCustomer">
+                    <input type="submit" value="ĐĂNG KÝ" class="submit col-md-4" id="submitEmailFromCustomer">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12"><p>
+            Copyright &copy;2022 by Tống Đức Duy | Lê Trung Kiên | Lê Bùi Minh Khoa
+        </p></div>
+    </footer>
+    
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/product.js" type="module"></script>
+</body>
+</html>

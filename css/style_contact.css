@@ -1,0 +1,150 @@
+body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.content{
+    text-align: center;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    
+}
+
+.content h1{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-bottom: 50px;
+    font-size: 50px ;
+    
+}
+
+.content h2{
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.content h3{
+    font-size: 35px;
+}
+
+.contactLeadShop{
+    text-align: left;
+}
+
+
+
+
+.contactsocialmedia button{
+    border: none;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.contactsocialmedia button:hover,
+.contactsocialmedia button:active{
+    background-color: #555;
+}
+
+.contactsocialmedia button:hover i{
+    color: white;
+    transition: color 2s ;
+}
+
+.part-2 .contactLeadShop{
+    padding: 0;
+}
+
+
+.part-2 .contactLeadShop li{
+    display: block;
+    align-items: center;
+    font-size: 20px;
+    
+}
+.part-2 .contactLeadShop li a,.part-2 .contactLeadShop li span{
+    color: #555;
+    font-size: 15px;
+    font-family: "SVN-Futura Medium", sans-serif;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+.postOthers h6{
+    font-weight: 700;
+}
+
+.postOthers img{
+    height: 300px;
+    width:  100%;
+    object-fit: cover;
+    transition: 0.5s all ease-in-out;
+    
+}
+
+.postOthers img:hover{
+    transform: scale(1.2);
+    cursor: pointer;    
+
+}
+
+.postOthers p{
+    font-weight: 500;
+} 
+
+.link a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 1.25s ;
+}
+
+.link a:hover{
+    color: #97552C ;
+    display: block;
+    padding: 1.3rem 1.5rem;
+    font-weight: 300px;
+    transition: 0.2s linear;
+    position: relative;
+    line-height: 21px;
+    text-decoration-line: none;
+}
+
+
+form input{
+    border: none ;
+    border-bottom: 1px solid rgb(199, 192, 192);
+    outline: 0;
+}
+
+form input:focus{
+    border-color: rgb(0, 0, 0);
+}
+
+form textarea{
+    outline: 0;
+}
+
+.email{
+    margin-right: 20px;
+}
+
+form .row{
+    margin-bottom: 10px ;
+}
+
+.send button{
+    border: 1px solid;
+    margin-top: 10px;
+    width: 50px;
+    transition: all 1.2s ;
+    background-color: white;
+    float: right;
+}
+
+.send button:hover{
+    width: 100px;
+    color: rgb(38, 135, 174);
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Blog | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="/img/logo.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style_Kien_thuc_thoi_trang.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="../css/style_main.css">
+    <link rel="stylesheet" href="../css/now-ui-dashboard.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="childOfPage"></div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="../img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="../index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="areaSearch">
+                        <div class="search">
+                            <input type="text" placeholder="Tìm kiếm" id="content">
+                            <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                        </div>
+                    </div>
+                    <ul class="option" id="option">
+                        <li @click="clickProfile" ><i class="now-ui-icons users_single-02"></i></li>
+                        <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                        <li @click="clickLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                    </ul>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs" id="currentOpen">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div id="toast"></div>
+    <div class="currentpath" data-aos="fade-left">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../blog.html">Blog</a>
+        <a href="" id="current">Cách Phối Màu Quần Áo Cho Nữ Da Ngăm Tự Tin Cháy Phố</a>
+    </div>
+    <div class="content-section-4"> 
+        <h4 class="section-sub-heading-3">Cách Phối Màu Quần Áo Cho Nữ Da Ngăm Tự Tin Cháy Phố</h4>
+        <div class="section">
+            <p>Các cách phối màu quần áo cho nữ da ngăm mà các nàng có làn da bánh mật cần biết để không bị mờ nhạt hoặc quá “ô dề” mỗi khi cháy phố. Chắc hẳn không ít bạn nữ sở hữu làn da ngăm thường phải đau đầu mỗi khi lựa chọn trang phục cho mình, nhưng đó chỉ là khi bạn chưa đọc qua bài viết này thôi! Hôm nay Lì Ven sẽ mách cho bạn các tip phối màu quần áo giúp làn da ngăm không còn là khuyết điểm nhé.</p>
+            <h3>1. Nữ da ngăm đen nên phối màu quần áo như thế nào?</h3>
+            <p>Lượng sắc tố Melanin trong da nhiều khiến cho làn da đậm màu trở thành một vấn đề làm các bạn nữ tự ti vì màu da khá kén trang phục. Nhưng ngày nay da bánh mật lại đang dần trở thành xu hướng thời trang được rất nhiều người theo đuổi. Nếu mỗi khi diện đồ và ngắm mình trong gương bạn luôn muốn “ét ô ét” thì chắc chắn không phải tại làn da mà là do bạn chưa biết phối đồ đúng cách. Bài viết này chính là tín hiệu vũ trụ gửi đến bạn, hãy cùng tìm hiểu xem các màu sắc phù hợp mà các bạn nên chọn.</p>
+            <h5>1.1. Phối màu quần áo với tông sáng</h5>
+        </div>
+        <img src="../img/phong-cach-thoi-trang-toi-gian-2.png" >
+        <div class="section">
+            <p>Rất nhiều bạn da ngăm vô cùng “sợ” màu sáng vì nghĩ nó sẽ khiến khuyết điểm da ngăm càng lộ rõ hơn. Nhưng da ngăm không phải khuyết điểm và bạn hoàn toàn có thể diện đồ với những sắc sáng khác nhau bao gồm cả màu trắng tinh.</p>
+            <p>Khác với quan điểm bạn vẫn thường nghĩ da ngăm kỵ trắng, thực chất màu trắng là gam màu phù hợp với mọi loại da. Diện đồ cùng gam trắng kết hợp vài chi tiết hoạt hình “cute” và một phong thái đầy tự tin sẽ giúp làn da bạn trở nên nổi bật hơn rất nhiều.</p>
+            <h5>1.2. Tông màu ấm</h5>
+        </div> 
+        <img src="../img/tong-mau-am.png">
+        <div class="section">
+            <p>Nếu các bạn thuộc tuýp người hướng nội, thích nét đẹp an toàn không quá nổi bật thì các tông màu ấm sẽ là lựa chọn vô cùng hoàn hảo. Các gam màu nóng pha cùng sắc nâu hoặc vàng tạo nên tông màu ấm áp, sắc màu này sẽ giúp làn da các bạn trông khỏe khoắn, làm cho khuôn mặt trở nên tươi tắn và thu hút hơn.</p>
+            <p>Sự kết hợp hài hòa đó giúp tôn lên nét đẹp của các nàng da bánh mật, trong đó các bạn có thể tham khảo các màu cho trang phục của mình như: Đỏ ấm, nâu đậm, cam và vàng….</p>
+            <h5>1.3. Tông màu lạnh</h5>
+        </div>
+        <img src="../img/tong-mau-lanh.png">
+        <div class="section">
+            <p>Nhiều người nghĩ tông màu lạnh sẽ vô cùng “dìm hàng” các nàng da ngăm vì khiến làn da trở nên tối màu hơn. Tuy nhiên có rất nhiều màu lạnh “chân ái” không dừng ở mức độ phù hợp với da ngăm mà còn giúp các bạn trở nên nổi bật hơn.</p>
+            <p>Một số gam màu lạnh khiến làn da ngăm càng thêm khỏe khoắn mà các bạn có thể vô tư thử sức như: màu xanh navy, màu xanh cổ vịt, màu xanh coban…</p>
+            <h5>1.4. Các tông màu pastel</h5>
+        </div>
+        <img src="../img/tong-mau-pastel.png">
+        <div class="section">
+            <p>Không phải tự dưng mà màu pastel lại được ưu ái với danh xưng là gam màu “nịnh da”, màu pastel có ưu điểm là tạo cảm giác dịu mắt cho người nhìn. Do đó kể cả những bạn da trắng lẫn da ngăm đều có thể đưa màu này vào tủ đồ của mình. Tùy vào tính cách mà các bạn có thể lựa chọn sắc pastel phù hợp nhé.</p>
+            <h3>2. Một vài lưu ý khi phối màu quần áo cho nữ da ngăm</h3>
+            <p>Ngoài việc lựa chọn được màu sắc phù hợp giúp làm nổi bật cho tông da ngăm thì các bạn cũng cần phải biết cả về chọn màu quần, phụ kiện đi cùng set đồ hoặc các màu sắc nên tránh. Đến với một số lưu ý để có được set đồ hoàn hảo cho da bánh mật.</p>
+            <h5>2.1. Không cần “sợ” các màu sắc tươi sáng</h5>
+        </div>
+        <img src="../img/gam-mau-tuoi-sang.png">
+        <div class="section">
+            <p>Hãy “đá” ngay quan niệm da ngăm không đi được với trang phục có màu tươi sáng đi! Ngày nay các cô nàng da ngăm đang rất thành công trong việc tạo nên xu hướng thời trang với những gam màu sáng như xanh nước biển, cam nhạt hoặc vàng. Nếu những các bạn sở hữu làn da sáng màu dễ bị lưu mờ trong các tông màu sáng thì ngược lại da ngăm vô cùng nổi bật mỗi khi kết hợp cùng trang phục sáng màu.</p>
+            <h5>2.2. Nên chọn gam màu nhẹ nhàng cho quần</h5>
+        </div class="section">
+        <img src="../img/gam-mau-nhe-nhang-cho-quan.png">
+        <div class="section">
+            <p>Đối với việc chọn màu quần thì các bạn nên chọn những màu nhẹ nhàng hơn màu da. Đặc biệt nên tránh mặc quần đen vì nó sẽ khiến tổng thể các bạn nhìn tối đi hẳn, nên chọn tông màu ấm sẽ phù hợp hơn cho nàng da ngăm.</p>
+            <h5>2.3. Phối hợp cùng phụ kiện để outfit của các bạn trở nên nổi bật hơn</h5>
+        </div>
+        <img src="../img/tim-hieu-phong-cach-thoi-trang-cua-ban-than-1.png">
+        <div class="section">
+            <p>Phối hợp cùng phụ kiện để outfit của các bạn trở nên nổi bật hơn Việc chọn các phụ kiện đi kèm mang yếu tố quyết định đến vẻ ngoài và phong cách thời trang của các bạn. Vậy nên lựa chọn phụ kiện thế nào đối với da ngăm sẽ giúp các bạn trông có gu hơn?</p>
+            <p>Một phụ kiện vô cùng thông dụng mà cả nam và nữ đều sở hữu đó là đồng hồ. Đối với đồng hồ thì các bạn nên đeo đồng hồ dây kim loại sáng màu giúp da nhìn sáng hơn. Nên tránh các đồng hồ màu trắng hoặc có màu quá đậm như xanh dương, nâu đậm, xám đậm…</p>
+            <p>Các bạn có thể chọn mua một chiếc kính mát phản quang hoặc có màu, nó không chỉ giúp bảo vệ mặt mà còn giúp nàng bánh mật thêm sành điệu khi đi cùng với loại phụ kiện này.</p>
+            <h5>2.4. Những gam màu khi phối quần áo mà nữ da ngăm nên “xa lánh”</h5>
+            <p>Có rất nhiều cách phối màu quần áo cho nữ da ngăm đen, vậy cũng sẽ có một số màu sắc mà các bạn nên tránh để không bị dìm trong chính bộ trang phục của mình. Hãy tránh những tông màu: nâu đen, đen, xanh lá, đỏ gạch, đỏ tươi và các màu neon.</p>
+            <p>Các gam màu nêu trên sẽ khiến da các bạn trông xỉn màu và tối đi hẳn, tạo hiệu ứng tương phản không nổi bật theo hướng tích cực mà nhìn rất “diêm dúa”.</p>
+            <h3>3. Các cách phối màu quần áo cho nữ da ngăm đen</h3>
+            <p>Sau khi xác định được màu sắc phù hợp với làn da thì bước tiếp theo chính là lựa chọn trang phục tạo nên phong cách cho riêng mình. Phối đồ cho nữ da ngăm đen như thế nào để có thể tôn lên những ưu điểm làm nổi bật làn da? Hãy đến với những tip phối đồ cực đỉnh dưới đây!</p>
+            <h5>3.1. Tips phối đồ với quần “mãi đỉnh” cho da ngăm</h5>
+        </div>
+        <img src="../img/tips-phoi-quan-mai-dinh.png">
+        <div class="section">
+            <p>Có rất nhiều mẫu mã và kiểu dáng áo quần, nhưng đâu mới là chân ái cho các nàng da ngăm thì phải xem qua các cách phối đồ sau đây:</p>
+            <h5>Áo thun oversized nhiều màu đi cùng quần baggy hường bánh bèo</h5>
+            <P>Một chiếc áo thun oversized có tông màu ấm đi cùng quần baggy mang sắc hồng yêu thích sẽ tạo nên phong cách thời trang không chỉ nổi bật mà còn vô cùng xinh xắn. Một sự phối hợp vô cùng hài hòa mà các bạn nhất định phải thử.</P>
+            <h5>Áo hai dây croptop và quần cùng màu cực cá tính</h5>
+            <p>Dành cho những nàng lười phải suy nghĩ về việc phối quần áo thì các set đồ cùng màu sẽ là lựa chọn tối ưu cho các bạn. Áo hai dây croptop năng động phối cùng quần cùng màu giúp các bạn khoe lên vòng eo và nhân đôi độ nổi bật.</p>
+            <h5>Phối áo phông cùng quần họa tiết</h5>
+            <p>Nữ da ngăm nên mặc áo phông màu gì? Hãy thử tip phối đồ giữa áo phông oversized với các gam màu nổi cùng quần họa tiết, set đồ khá nổi nhưng khi đi cùng lại vô cùng hài hòa. Các bạn chỉ việc tự tin diện cho mình những màu yêu thích, nó chắc chắn sẽ giúp các bạn trở nên thu hút hơn rất nhiều.</p>
+            <h5>Áo phông đen cùng quần legging giúp da sáng hơn</h5>
+            <p>Áo phông đen cùng quần legging đen đơn giản làm cho da các bạn nhìn sáng hơn. Set đồ full đen vô cùng ngầu này rất thích hợp cho những bạn nữ có cá tính mạnh.</p>
+            <h5>Croptop yếm phối cùng quần jeans</h5>
+        </div>
+        <img src="../img/ao-thun-phoi-cung-yem.png">
+        <div class="section">
+            <p>Làn da ngăm với áo yếm trắng sao không? Bạn có thể kết hợp áo yếm croptop trắng cùng quần jeans vừa nổi bật da vừa quyến rũ thu hút. Set đồ này sẽ giúp các bạn khoe nét đẹp cơ thể, thể hiện cá tính riêng của bản thân.</p>
+            <h5>3.2. Tips phối áo với chân váy điệu đà cho nàng da bánh mật</h5>
+            <p>Nếu các bạn thích phong cách dịu dàng nữ tính hơn thì có thể kết hợp áo cùng các loại chân váy không chỉ nữ tính mà còn vô cùng thanh lịch. Ví dụ như chân áo phông và chân váy midi, áo thun với chân váy len, croptop cùng chân váy ôm,…</p>
+            <h5>Áo thun đi cùng chân váy midi</h5>
+            <p>Với cách phối đồ cho nữ da ngăm các bạn có thể chọn cách phối áo thun oversize và chân váy midi xẻ tà. Lưu ý là hãy lựa chọn để set đồ có cùng tông màu. Áo kết hợp chân váy thêm đường xẻ tà vừa hiện đại lại vô cùng cá tính.</p>
+            <h5>Áo thun ôm kết hợp cùng chân váy len</h5>
+            <p>Set váy mùa thu mà các nàng không thể bỏ qua, chân váy len cùng áo thun ôm cực kỳ xinh. Với set này các bạn có thể lựa chọn tông màu nâu để tăng độ nổi bật cho làn da của mình.</p>
+            <h5>Croptop phối cùng chân váy ôm</h5>
+            <p>Croptop hai dây phối với chân váy ôm cùng màu khéo léo khoe ra đường cong quyến rũ, đặc biệt với làn da ngăm thì cách phối này càng làm bật lên màu da bánh mật vô cùng thu hút.</p>
+            <p>Trên đây là toàn bộ những tip chọn và cách phối màu quần áo cho nữ da ngăm đang là xu hướng giới trẻ mà các bạn có thể tham khảo để chuẩn bị cho mình một tủ đồ “xịn sò” phù hợp với màu da bánh mật. Hãy theo dõi thêm nhiều bài biết của nhà Lì Ven chúng mình để bỏ túi thêm nhiều bí quyết diện đồ cực xinh nữa nhé!</p>
+        </div>
+    </div>
+    <footer class="container-fluid footer">
+        <div class="col-md-7 link-text">
+            <div class="information col-md-4">
+                <h6>THÔNG TIN CÔNG TY</h6>
+                <li><a v-bind:href = "aboutUs">Giới thiệu về NEW CLOTHES </a></li>
+            </div>
+            <div class="support col-md-4">
+                <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="policyMembership">Chính sách Membership</a></li>
+                <li><a v-bind:href="guideOrders">Hướng dẫn mua hàng</a></li>
+                <li><a v-bind:href="policyTransport">Chính sách vận chuyển</a></li>
+                <li><a v-bind:href="policyReturnsWarranty">Chính sách đổi trả & bảo hành</a></li>
+            </div>
+            <div class="services col-md-4">
+                <h6>DỊCH VỤ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="contactUs">Liên hệ chúng tôi</a></li>
+                <li><a v-bind:href="payments">Phương thức thanh toán</a></li>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="contact">
+                <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
+                <ul>
+                    <li><a v-bind:href="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a v-bind:href="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a v-bind:href="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+            <div class="sendMail">
+                <h6>ĐĂNG KÝ NHẬN EMAIL TỪ NEW CLOTHES</h6>
+                <div class="send col-md-12">
+                    <input type="email" class="value col-md-8" placeholder="Địa chỉ email của bạn" id="inputEmailFromCustomer">
+                    <input type="submit" value="ĐĂNG KÝ" class="submit col-md-4" id="submitEmailFromCustomer">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12"><p>
+            Copyright &copy;2022 by Tống Đức Duy | Lê Trung Kiên | Lê Bùi Minh Khoa
+        </p></div>
+    </footer>
+    <script src="../js/main.js" type="module"></script>
+
+</body>
+</html>

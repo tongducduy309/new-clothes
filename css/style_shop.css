@@ -1,0 +1,232 @@
+body{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    
+}
+
+h5{
+    margin-top: 40px;
+}
+
+section{
+    margin-bottom: 20px;
+}
+
+.contentSearch{
+    width: 100%;
+    height: max-content;
+    padding-right: 40px;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contentSearch i{
+    color: #d2d2d2;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.contentSearch i:hover{
+    color: #000000;
+}
+
+#contentView{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: normal;
+}
+
+
+
+.sort{
+    display: flex;
+    width: 300px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.sort h4{
+    margin-right: 10px;
+}
+
+.sort select{
+    width: 80%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid rgb(198, 198, 198);
+    
+}
+
+li{
+    list-style: none;
+}
+
+.filter .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #000;
+}
+
+.filter{
+    border: 1px solid rgb(220, 220, 220);
+    padding-bottom: 40px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.optionFilter{
+    padding-left: 10px;
+}
+
+#filterType {
+    width: 80%;
+    height: 100%;
+    
+}
+
+.type>input{
+    margin-right: 10px;
+}
+
+
+
+.selectColor{
+    height: 15px;
+    border: 1px solid rgb(179, 179, 179);
+    margin: 1px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.filterPrice{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.filterPrice input{
+    width: 40%;
+    border: 1px solid rgba(120, 120, 120, 0.3);
+}
+
+.buttonFilter{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 0;
+}
+.buttonFilter:hover{
+    color: #fff;
+}
+.deleteFilter{
+    margin-top: 10px;
+    text-align: center;
+}
+#deleteFilter{
+    cursor: pointer;
+    user-select: none;
+    display: none;
+}
+#deleteFilter:hover{
+    color: #929292;
+}
+.listItem{
+    position: relative;
+    margin-bottom: 40px;
+    height: max-content;
+}
+
+.item{
+    cursor: pointer;
+    margin-bottom: 20px;
+    height: 300px;
+}
+.item>h4{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.item>p{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.item:hover{
+    box-shadow: 1rem 0.2rem 3rem rgba(0, 0, 0, 0.16);
+}
+
+.listColor{
+    display: flex;
+    width: 100%;
+    
+}
+
+.itemColor{
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(179, 179, 179);
+    margin: 0 1px;
+}
+
+.item img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+.widePagination{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+}
+#body-widePagination{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    display: block;
+    height: 40px;
+    width: 260px;
+    overflow: hidden;
+    text-align: center;
+    
+}
+.pagination_item{
+    margin: 0 5px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 10px;
+    color: #000;
+    text-decoration: none;
+}
+.pagination_item>span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.pagination_item[class="pagination_item"]:hover{
+    background-color: rgba(120, 120, 120, 0.3);
+    color: #000;
+}
+.selectPaginationItem{
+    background-color: #000;
+    color: #fff;
+    
+}
+.selectPaginationItem:hover{
+    color: #fff;
+}
+
+
+

@@ -1,0 +1,102 @@
+body{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+h1{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+h2{
+    font-size: 18px;
+    color: #000;
+}
+
+li{
+    list-style: none;
+}
+
+.titleHead{
+    text-align: center;
+}
+.Noidung{
+    display: block;
+    width: 100%;
+}
+.Noidung span,.Noidung p{
+    width: 100%;
+    margin: 40px 0;
+    font-size: 18px;
+    display: block;
+    color: black;
+}
+.Noidung span{
+    font-weight: bold;
+    font-size: 16px;
+} 
+.Noidung .TieuDe{
+    margin-top:36px ;
+    padding: 12px 0;
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+}
+.Colum-item{
+    padding: 0 20px;
+    flex: 1;
+}
+.bt{
+    display: inline-block;
+    border-right: thin solid rgba(112, 112, 112, 0.3);
+}
+.part{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+.TieuDe a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown{
+    position: relative;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+
+.dropdown li{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+
+.dropdown-content{
+    opacity: 0;
+    height: 0;
+}
+
+.dropdown-ef{
+    transition: 1s;
+    height: max-content;
+    opacity: 1;
+}
+.dropup-ef{
+    transition: 1s;
+    height: 0;
+    opacity: 0;
+}
+
+.rotate-ef{
+    transition: 1s;
+    transform: rotate(45deg);
+}
+.normal-ef{
+    transition: 1s;
+    transform: rotate(0deg);
+}
+

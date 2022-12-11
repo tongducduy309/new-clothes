@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Chăm sóc khách hàng | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="../img/logo.png"/>
+    <script src="../vendor/vue.js"></script>
+    <link rel="stylesheet" href="../customerCare/style_QNA.css">
+    <link href="../fonts/AlumniSansPinstripe.css" rel="stylesheet">
+    <link href="../fonts/YanoneKaffeesatz.css" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/aos.css" />
+    <script src="../vendor/aos.js"></script>
+    <link rel="stylesheet" href="../css/style_main.css">
+    <link rel="stylesheet" href="../css/now-ui-dashboard.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="childOfPage"></div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="../img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="../index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="rightNav-left">
+                        <div class="areaSearch">
+                            <div class="search">
+                                <input type="text" placeholder="Tìm kiếm" id="content">
+                                <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="rightNav-right">
+                        <ul class="option" id="option">
+                            <li @click="clickProfile" id="buttonProfile"><i class="now-ui-icons users_single-02"></i></li>
+                            <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                            <li @click="clickLogout" id="buttonLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                        </ul>
+                        <span id="nameAccount"></span>
+                    </div>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div id="toast"></div>
+    <div class="currentpath" data-aos="fade-left">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../customerCare.html">Chăm sóc khách hàng</a>
+        <a href=""id="current">Q&A</a>
+    </div>
+    <div class="Noidung">
+        <h1 class="titleHead" data-aos="fade-left">Q & A </h1>
+        <div class="TieuDe" data-aos="fade-up">
+            <div class="Colum-item ft1">
+                <div class="P1">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Làm sao để liên hệ với New Clothes khi không kết nối được với tổng đài?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Các cuộc gọi của các bạn sẽ được trả lời 100%. Trong trường hợp hotline quá tải, tụi mình sẽ gọi lại ngay sau đó.
+                        <br>Ngoài ra bạn có thể gửi thông tin đến inbox Fanpage hoặc email để được hỗ trợ nhanh chóng.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P2">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>New Clothes có quy định về thời gian đặt hàng online hay không?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Bạn có thể đặt hàng 24/24h mỗi ngày, tụi mình luôn sẵn sàng nhận đơn hàng của bạn.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P3">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Khi đặt nhiều đơn hàng trong một ngày thì có được gộp lại không?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Nếu đặt nhiều đơn và cùng thông tin người nhận trong một ngày, New Clothes sẽ liên hệ lại với bạn để gộp các đơn hàng và tính phí vận chuyển cho 1 đơn hàng.
+                        <br>Lưu ý**: Ngoại trừ đơn hàng trong chương trình sale/ promotion đặc biệt mã giảm giảm giá chỉ áp dụng cho 1 đơn hàng nên khi gộp đơn sẽ không được cộng dồn ưu đãi.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P4">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Sau bao lâu sẽ nhận được hàng?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Bạn sẽ nhận được hàng sau 3-5 ngày từ lúc bạn nhận được thông tin xác nhận đơn hàng từ bộ phận CSKH.
+                        <br>Ngoài ra tụi mình có dịch vụ giao hàng hỏa tốc trong nội thành TP Hồ Chí Minh tối đa 2h.
+                        <br>Lưu ý: Thời gian giao hàng không tính thứ bảy, chủ nhật hay các ngày lễ tết. Đối với những chương trình sale lớn hoặc do điều kiện thời tiết bất ổn, thời gian trên có thể thay đổi so với dự kiến. (không áp dụng cho giao hàng hỏa tốc)</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P5">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Làm sao để biết đã đặt hàng thành công?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Sau khi bạn hoàn thành các bước đặt hàng theo chỉ dẫn trên website, bạn sẽ nhận được email xác nhận đơn hàng, sau đó tụi mình sẽ liên hệ cho bạn qua số điện thoại để xác nhận lần cuối.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P6">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Làm sao để chọn sản phẩm phù hợp với số đo của bạn?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Bạn sẽ đối chiếu số đo của mình với bảng thông số size của New Clothes ở đây nhe. Hoặc liên hệ Fanpage, Hotline để được tụi mình hỗ trợ nhanh chóng.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bt"></div>
+            <div class="Colum-item ft2">
+                <div class="P1">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Làm sao để hủy đơn hàng khi đã đặt hàng?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Bạn liên hệ ngay đến Fanpage hoặc Hotline để tụi mình có thể hỗ trợ cập nhật kịp thời HỦY đơn hàng mới đặt của bạn.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P2">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Có cần phải đăng ký tài khoản khi đặt hàng online không?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Để thuận tiện cho những lần mua hàng kế tiếp, bạn nên đăng ký tài khoản để hệ thống lưu trữ thông tin và xác nhận đơn hàng nhanh và thuận tiện hơn nha.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P3">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Có thể đăng ký nhiều tài khoản trên New Clothes không?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>New Clothes không quy định khách hàng chỉ được đăng ký duy nhất một tài khoản trên website, bạn có thể đăng ký nhiều tài khoản mà không trùng số điện thoại. Tuy nhiên, bạn nên đăng ký và sử dụng một tài khoản với thông tin cá nhân hay sử dụng nhất để tránh nhầm lẫn đơn hàng và địa chỉ nhận hàng.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P4">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Làm thế nào để thay đổi thông tin cá nhân trong tài khoản?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Để thay đổi thông tin, bạn cần đăng nhập vào tài khoản trên New Clothes. Sau đó, vào Tài khoản và nhấn chỉnh sửa để thay đổi thông tin theo mong muốn.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P5">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Có những hình thức thanh toán nào trên website New Clothes?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Bạn có thể thanh toán cho đơn hàng online theo một trong các cách sau:
+                        <br>  
+                            - Thanh toán khi nhận hàng bằng tiền mặt (COD)
+                        <br>    
+                            - Thanh toán khi đặt hàng bằng các loại thẻ ATM nội địa, Visa, Master.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="P6">
+                    <div class="dropdown">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                        <span>Có được hoàn tiền đã thanh toán không khi hủy đơn hàng?</span>
+                        
+                    <div class="dropdown-content">
+                        <p>Chúng mình có hoàn lại tiền theo nhu cầu của bạn trong vòng 24-48h. Tuy nhiên không áp dụng đơn hàng trên sàn TMĐT.
+                        <br>Lưu ý: New Clothes có quyền ngưng hỗ trợ hoàn tiền nếu phát hiện trường hợp trục lợi.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid footer">
+        <div class="col-md-7 link-text">
+            <div class="information col-md-4">
+                <h6>THÔNG TIN CÔNG TY</h6>
+                <li><a v-bind:href = "aboutUs">Giới thiệu về NEW CLOTHES </a></li>
+            </div>
+            <div class="support col-md-4">
+                <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="policyMembership">Chính sách Membership</a></li>
+                <li><a v-bind:href="guideOrders">Hướng dẫn mua hàng</a></li>
+                <li><a v-bind:href="policyTransport">Chính sách vận chuyển</a></li>
+                <li><a v-bind:href="policyReturnsWarranty">Chính sách đổi trả & bảo hành</a></li>
+            </div>
+            <div class="services col-md-4">
+                <h6>DỊCH VỤ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="contactUs">Liên hệ chúng tôi</a></li>
+                <li><a v-bind:href="payments">Phương thức thanh toán</a></li>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="contact">
+                <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
+                <ul>
+                    <li><a v-bind:href="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a v-bind:href="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a v-bind:href="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+            <div class="sendMail">
+                <h6>ĐĂNG KÝ NHẬN EMAIL TỪ NEW CLOTHES</h6>
+                <div class="send col-md-12">
+                    <input type="email" class="value col-md-8" placeholder="Địa chỉ email của bạn" id="inputEmailFromCustomer">
+                    <input type="submit" value="ĐĂNG KÝ" class="submit col-md-4" id="submitEmailFromCustomer">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12"><p>
+            Copyright &copy;2022 by Tống Đức Duy | Lê Trung Kiên | Lê Bùi Minh Khoa
+        </p></div>
+    </footer>
+    <script src="../js/main.js" type="module"></script>
+    <script src="../customerCare/js_QNA.js"></script>
+</body>
+</html>

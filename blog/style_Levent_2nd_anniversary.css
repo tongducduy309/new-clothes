@@ -1,0 +1,30 @@
+
+.content-section-6 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-sub-heading-5{
+    font-size: 30px;
+}
+
+.picture_3{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 50px;
+}
+
+.picture_3 img{
+    width: 350px;
+}
+
+.section_2{
+    width: 900px;
+    padding: 5px;
+    text-align: center;
+}

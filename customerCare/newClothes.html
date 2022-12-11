@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Chăm sóc khách hàng | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="../img/logo.png"/>
+    <script src="../vendor/vue.js"></script>
+    <link rel="stylesheet" href="../customerCare/style_newclothes.css">
+    <link href="../fonts/AlumniSansPinstripe.css" rel="stylesheet">
+    <link href="../fonts/YanoneKaffeesatz.css" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/aos.css" />
+    <script src="../vendor/aos.js"></script>
+    <link rel="stylesheet" href="../css/style_main.css">
+    <link rel="stylesheet" href="../css/now-ui-dashboard.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="childOfPage"></div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="../img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="../index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="rightNav-left">
+                        <div class="areaSearch">
+                            <div class="search">
+                                <input type="text" placeholder="Tìm kiếm" id="content">
+                                <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="rightNav-right">
+                        <ul class="option" id="option">
+                            <li @click="clickProfile" id="buttonProfile"><i class="now-ui-icons users_single-02"></i></li>
+                            <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                            <li @click="clickLogout" id="buttonLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                        </ul>
+                        <span id="nameAccount"></span>
+                    </div>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div id="toast"></div>
+    <div class="currentpath" data-aos="fade-left">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../customerCare.html">Chăm sóc khách hàng</a>
+        <a href=""id="current">New clothes</a>
+    </div>
+    <div class="Noidung">
+        <h1 class="titleHead" data-aos="fade-left">NEW CLOTHES</h1>
+        <div class="TieuDe" data-aos="fade-up">
+            <h1 style="margin-bottom: 40px;">CÓ THỂ BẠN CHƯA BIẾT VỀ DÒNG VẢI CHẤT LƯỢNG NHẤT CỦA NEW CLOTHES&reg</h1>
+            <h2>New Clothes với mục tiêu trở thành 1 trong những thương hiệu thời trang dạo phố hàng đầu tại Việt Nam. Nổi tiếng với các dòng sản phẩm chủ đạo như: Áo thun, đồ nỉ…
+                <br>
+                Để trở thành chuyên gia trong lĩnh vực này, tụi mình đã bắt tay nghiên cứu ra các dòng vải đặc trưng của thương hiệu, để giải quyết các vấn đề cao hơn mà các bạn gặp phải khi sở hữu một sản phẩm thời trang. Và Lì Ven Fabric ra đời với các ưu điểm sau:
+                <br>+ Chất vải dày dặn nhưng vẫn mang đặc tính thoáng mát.
+                <br>+ Hạn chế tối đa đổ lông sau một thời gian sử dụng.
+                <br>+ Bề mặt vải láng mịn, hạn chế nhăn.
+                <br>+ Và đặc biệt, feeling so cool khi cảm nhận bề mặt vải
+                <br> <br>
+                Mỗi loại vải tại NEW CLOTHES&reg đều có những ưu điểm khác nhau để đáp ứng những thị hiếu của các bạn, nhưng để phân biệt dòng vải đặc biệt này team đã thiết kế riêng một bộ tag để đính kèm trong mỗi sản phẩm được làm từ Lì Ven Fabric.
+                <br>
+                Đây là cách phân biệt, nếu bạn sở hữu một sản phẩm có đính kèm bộ tag trên có nghĩa là bạn đang sở hữu sản phẩm chất lượng cao nhất của bên mình đấy.</h2>
+            <img style="width:50%;margin-top: 30px;" src="https://levents.asia/wp-content/uploads/2022/09/201464886_1237625823366216_976983756277174935_n.jpeg" alt="San pham">
+            <h2>
+                DỰ ÁN ẤP Ủ
+                <br>
+                <br>
+                LÌ VEN FABRIC là một dự án mà cả team đã ấp ủ rất lâu để nghiên cứu ra chất liệu vải mang đặc trưng riêng và là chất vải độc quyền của thương hiệu NEW CLOTHES&reg.
+                <br>
+                <br>
+                Động lực cho tụi mình nghiên cứu và phát triển nên loại vải mới này chính là để giải quyết các vấn đề mà các bạn thường gặp phải khi sở hữu một sản phẩm thời trang:
+                <br>+ Đa số các sản phẩm thời trang đều được làm từ chất liệu 100% cotton, nhưng đa số các bạn đều không thích hiện tượng đổ lông sau một thời gian sử dụng.
+                <br>+ Sở hữu được một chiếc áo cực kỳ ưng ý nhưng chỉ dám trưng bày trong tủ vì sợ nhăn và xuống màu.
+                <br>+ Chiếc Hoodie/ sweater tậu được từ mùa Xuân nhưng phải đợi đến Đông mới có dịp sử dụng, vì nóng.
+                <br>
+                <br>
+                LÌ VEN FABRIC được tạo ra để giải quyết các vấn đề trên, tụi mình nghĩ rằng không có bất cứ hạn chế nào có thể ngăn cản bạn sử dụng sản phẩm mà bạn yêu thích.
+                <br>
+                <br>
+                Chất liệu đặc biệt sẽ được ra mắt cùng collection sắp tới, hi vọng các bạn sẽ thích sản phẩm này như cách mà tụi mình đã dành hết tâm huyết tạo ra!</h2>    
+            <img src="https://levents.asia/wp-content/uploads/2022/09/287072153_1472128303249299_7054780554491011423_n-1909x999.jpeg" alt="San pham">
+            <h1>CÔNG BỐ TIMELINE RA MẮT CÁC DÒNG VẢI T - SHIRT NEW CLOTHES&reg 2022</h1>    
+            <h2>Tại 2022, chúng mình không ngừng tập trung nghiên cứu, thử nghiệm và phát triển các loại vải chất lượng để đáp ứng hoàn hảo cho nhu cầu của bạn khi sở hữu một sản phẩm thời trang.
+                <br>
+                <br>
+                Các dòng vải đã và sẽ xuất hiện trong 2022 hứa hẹn đem lại cho bạn những trải nghiệm thú vị.
+                <br>
+                <br> 1. Lì ven Original - bề mặt vải không đổ lông mang cảm giác thoáng mát.
+                <br> 2. Lì ven Original 2.0 - bề mặt vải có lông, khắc phục tình trạng bị nhăn của sản phẩm.
+                <br> 3. Lì ven Fabric - chất vải dày dặn vượt trội , mềm mịn, không bị nhăn.
+                <br> 4. Lì ven Compact - chất vải dày dặn, thoáng mát, mềm mịn nhưng không bị nhăn hay xù.
+                <br> 5. Lì ven Wash - chất vải mềm mịn, dày dặn và đặc biệt tạo nên những mảng màu loang cá tính.
+                <br>
+                <br>
+                Ngoài ra, tụi mình còn phát triển dịch vụ đổi hàng tận nơi lên đến 7 ngày để giúp mọi trải nghiệm của bạn tại Levents® trở nên dễ dàng hơn.
+                <br>
+                <br>
+                Hãy đón chờ cùng tụi mình nhé 💙
+                <br>
+                Levents 2022/ Comming soon.</h2>
+        </div>
+    </div>
+    <footer class="container-fluid footer">
+        <div class="col-md-7 link-text">
+            <div class="information col-md-4">
+                <h6>THÔNG TIN CÔNG TY</h6>
+                <li><a v-bind:href = "aboutUs">Giới thiệu về NEW CLOTHES </a></li>
+            </div>
+            <div class="support col-md-4">
+                <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="policyMembership">Chính sách Membership</a></li>
+                <li><a v-bind:href="guideOrders">Hướng dẫn mua hàng</a></li>
+                <li><a v-bind:href="policyTransport">Chính sách vận chuyển</a></li>
+                <li><a v-bind:href="policyReturnsWarranty">Chính sách đổi trả & bảo hành</a></li>
+            </div>
+            <div class="services col-md-4">
+                <h6>DỊCH VỤ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="contactUs">Liên hệ chúng tôi</a></li>
+                <li><a v-bind:href="payments">Phương thức thanh toán</a></li>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="contact">
+                <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
+                <ul>
+                    <li><a v-bind:href="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a v-bind:href="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a v-bind:href="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+            <div class="sendMail">
+                <h6>ĐĂNG KÝ NHẬN EMAIL TỪ NEW CLOTHES</h6>
+                <div class="send col-md-12">
+                    <input type="email" class="value col-md-8" placeholder="Địa chỉ email của bạn" id="inputEmailFromCustomer">
+                    <input type="submit" value="ĐĂNG KÝ" class="submit col-md-4" id="submitEmailFromCustomer">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12"><p>
+            Copyright &copy;2022 by Tống Đức Duy | Lê Trung Kiên | Lê Bùi Minh Khoa
+        </p></div>
+    </footer>
+        <script src="../js/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,783 @@
+body{
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+li{
+    list-style: none;
+}
+.page{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.leftPage{
+    
+    height: 100%;
+    background-color: #1b1b1b;
+    position: fixed;
+}
+.contain{
+    width: 20%;
+    position: relative;
+}
+.rightPage{
+    width: 80%;
+    height: 100%;
+    color: #747474;
+    position: relative;
+    
+}
+.titleHead{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #fff;
+    margin-bottom: 40px;
+    
+}
+
+.note{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
+
+.note i{
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    color: rgb(255, 205, 86);
+    
+}
+.buttonGroup{
+    color: #fff;
+    height: 60%;
+    width: 100%;
+
+}
+
+#buttonGroup{
+    position: fixed;
+    
+    height: 20%;
+    width: 100%;
+    bottom: 0;
+
+}
+
+#buttonGroup>.buttonTab{
+    border: none;
+    color: #fff;
+}
+
+#buttonGroup>.buttonTab:hover{
+    color: #747474;
+}
+
+.buttonTab{
+    margin: 0 20px;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 20px;
+    cursor: pointer;
+    display: block;
+}
+
+.rightPage>.titleHead{
+    color: #000;
+}
+
+#profile{
+    display: block;
+}
+
+.contentTab{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.contentTab>span{
+    font-size: 18px;
+}
+
+.profile-body{
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
+    padding: 30px 50px;
+}
+
+.contentTab>.boxPassword>input{
+    background-color: transparent;
+    text-align: right;
+    
+}
+
+.point{
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+    padding-top: 10px;
+}
+
+#togglePassword{
+    color: #000;
+    cursor: pointer;
+}
+
+.filterStatus{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    background-color: #fff;
+
+}
+.filterStatus i{
+    font-size: 40px;
+    display: inline-block;
+}
+.filterStatus>div{
+    flex:1;
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.filterStatus>div:hover{
+    background-color: #c6c6c6;
+}
+.cartCustomer{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.cartCustomer span{
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+#tab{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#tab>div{
+    position: fixed;
+    width: 800px;
+    height: 450px;
+    background-color: #fff;
+    z-index: 101;
+    border-radius: 10px;
+    
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
+    padding: 20px;
+
+}
+
+#tab .headTab{
+    position: relative;
+    height: 8%;
+}
+#tab .headTab>.title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+#tab .headTab>.closeTab{
+    position: absolute;
+    right: 10px;
+    color: #929292;
+    cursor: pointer;
+}
+
+#tabModifyProduct{
+    border-top: 20px solid #000;
+    font-size: 20px;
+}
+#tabAddProduct{
+    border-top: 20px solid #32CD32;
+    font-size: 20px;
+}
+#nameAddProduct{
+    flex: 7;
+}
+#tabDetailDelivery{
+    border-top: 20px solid #000;
+    font-size: 16px;
+    
+}
+
+.bodyTab{
+    display: flex;
+}
+
+.infoDelivery{
+    flex: 3;
+    padding-right: 10px;
+}
+.productsInDelivery{
+    flex: 7;
+    position: relative;
+}
+#listProductsInDelivery{
+    overflow-y: auto;
+}
+
+.productID{
+    display: block;
+    align-items: center;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+#listProductsInDelivery-body .idProductID{
+    width: 9%;
+    display: inline-block;
+}
+#listProductsInDelivery-body .nameProductID{
+    width: 40%;
+    display: inline-block;
+}
+#listProductsInDelivery-body .colorProductID{
+    width: 15%;
+    display: inline-block;
+}
+#listProductsInDelivery-body .countProductID{
+    width: 18%;
+    display: inline-block;
+}
+#listProductsInDelivery-body .priceProductID{
+    width: 18%;
+    display: inline-block;
+}
+
+#listProductsInDelivery-body span{
+    text-align: center;
+    font-size: 14px;
+}
+
+.productsInDelivery .value{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+#tabDetailDelivery{
+    border-top: 20px solid #000;
+    font-size: 16px;
+}
+
+.contentTab{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overView{
+    position: relative;
+    display: flex;
+    padding: 20px;
+}
+
+
+.graphBox{
+    position: relative;
+    display: block;
+    flex: 7;
+}
+.dataNumber{
+    position: relative;
+    padding: 0 20px;
+    min-height: 200px;
+    flex: 3;
+    
+}
+
+.box{
+    position: relative;
+    display: block;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0,0.08);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+select[class="box"]{
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 7px 25px rgba(0, 0, 0,0.2);
+    
+}
+
+.contentBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contentBox h2{
+    margin: 0;
+    color: rgb(54, 162, 235);
+}
+.rightBox{
+    flex: 4;
+    text-align: center;
+}
+.leftBox{
+    flex: 6;
+    display: flex;
+    align-items: left;
+    flex-flow: column;
+}
+.contentBox i{
+    font-size: 50px;
+    
+}
+
+.btnAdd{
+    position: relative;
+    width:40px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    z-index: 6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50%;
+    
+}
+
+.btnAccept{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 50px;
+    right: 0;
+    background-color: #32CD32;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.content-btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.content-btn>span{
+    font-size: 25px;
+}
+
+.leftTab,.rightTab{
+    flex: 1;
+
+}
+
+.leftTab{
+    margin-right: 20px;
+}
+.infoDelivery{
+    width: 30%;
+    padding-right: 10px;
+}
+.productsInDelivery{
+    width: 70%;
+    position: relative;
+}
+#listProductsInDelivery{
+    overflow-y: auto;
+}
+
+.productID{
+    display: block;
+    align-items: center;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.productID>.idProductID{
+    width: 5%;
+    display: inline-block;
+}
+.productID>.nameProductID{
+    width: 40%;
+    display: inline-block;
+}
+.productID>.colorProductID{
+    width: 15%;
+    display: inline-block;
+}
+.productID>.countProductID{
+    width: 18%;
+    display: inline-block;
+}
+.productID>.priceProductID{
+    width: 18%;
+    display: inline-block;
+}
+
+.productID span{
+    text-align: center;
+}
+
+.productsInDelivery .value{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+.contentTab{
+    width: 100%;
+     margin-bottom: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+.contentTab>input{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(141, 141, 141, 0.546);
+    font-size: 18px;
+    padding: 5px;
+    width: 30%;
+}
+.contentTab img{
+    width: 100px;
+}
+.colorInput>input{
+    font-size: 15px;
+    width: 120px;
+}
+.contentTab>#countModifyProduct,.contentTab>#priceModifyProduct,.contentTab>#namePicModifyProduct{
+    width: 120px;
+}
+.contentTab>#nameModifyProduct{
+    width: 240px;
+}
+
+
+
+.optionCustom{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 10;
+    width: 100px;
+}
+.optionCustom li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    color: #fff;
+    cursor: pointer;
+
+}
+.titleHead{
+    text-align: center;
+    font-size: 20px;
+}
+.table{
+    position: relative;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    background-color: #fff;
+    
+}
+
+
+.contentTable{
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+
+.space{
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+
+.onClickButton{
+    border-right: 4px solid rgba(54, 162, 235);;
+}
+
+.product{
+    height: 100px;
+    display: block;
+    align-items: center;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.groupOption{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.groupOption>select{
+    margin: 0 5px;
+}
+.groupOption .contentBox .leftBox span{
+    text-align: left;
+}
+
+.inputfile + label {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: #000;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: rgb(78, 76, 76);
+}
+
+.inputfile {
+	width: 100px;
+	height: 100px;
+	opacity: 0;
+	overflow: hidden;
+	z-index: 104;
+}
+
+#storage-body img{
+    height: 100%;
+    object-fit: contain;
+}
+
+.storage span{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+}
+
+
+
+.storage .idProduct{
+    width: 5%;
+    display: inline-block;
+}
+.storage .imgProduct{
+    width: 20%;
+    display: inline-block;
+}
+.storage .nameProduct{
+    width: 25%;
+    display: inline-block;
+}
+.storage .colorProduct{
+    width: 12%;
+    display: inline-block;
+}
+.storage .countProduct{
+    width: 12%;
+    display: inline-block;
+}
+.storage .priceProduct{
+    width: 12%;
+    display: inline-block;
+}
+.storage .statusProduct{
+    width: 14%;
+    display: inline-block;
+}
+
+.viewChild{
+    display: none;
+    padding: 0 10px;
+}
+
+.titleCol{
+    cursor: default;
+    margin-bottom: 20px;
+}
+
+
+.account{
+    display: block;
+    align-items: center;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px 0;
+    cursor: pointer;
+    
+}
+
+.manageCustomer span{
+    text-align: center;
+}
+
+.areaNumberAboutAccounts{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.areaNumberAboutAccounts>.box{
+    flex: 1;
+    margin: 0 5px;
+}
+.areaNumberAboutAccounts>.box .leftBox>span{
+    text-align: left;
+}
+
+
+.manageCustomer .idAccount{
+    width: 5%;
+    display: inline-block;
+}
+.manageCustomer .nameAccount{
+    width: 26%;
+    display: inline-block;
+}
+.manageCustomer .phoneAccount{
+    width: 10%;
+    display: inline-block;
+}
+.manageCustomer .emailAccount{
+    width: 10%;
+    display: inline-block;
+}
+
+.manageCustomer .usernameAccount{
+    width: 17%;
+    display: inline-block;
+}
+.manageCustomer .passwordAccount{
+    width: 17%;
+    display: inline-block;
+}
+.manageCustomer .statusAccount{
+    width: 15%;
+    display: inline-block;
+}
+
+.delivery{
+    display: block;
+    align-items: center;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px 0;
+    cursor: pointer;
+    
+}
+
+.filter{
+    margin-bottom: 20px;
+}
+#addFilter{
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+#addFilter:hover{
+    color: #929292;
+}
+
+.statusDelivery span{
+    text-align: center;
+}
+
+.statusDelivery .idDelivery{
+    width: 10%;
+    display: inline-block;
+}
+.statusDelivery .dateDelivery{
+    width: 30%;
+    display: inline-block;
+}
+.statusDelivery .valueDelivery{
+    width: 30%;
+    display: inline-block;
+}
+.statusDelivery .statusDelivery{
+    width: 30%;
+    display: inline-block;
+}
+
+#delivery-body select{
+    background-color: #fff;
+    border: 1px solid rgba(112, 112, 112, 0.3);
+}
+
+#statistics{
+    display: block;
+}
+
+.rankProfit{
+    position: relative;
+    flex: 8;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 7px 25px rgba(0, 0, 0,0.08);
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+
+.rankProfit span{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.rankProfit .name{
+    text-align: left;
+}
+.rankProfit .titleCol span{
+    text-align: center;
+}
+
+
+.rankProfit .name{
+    width: 65%;
+}
+.rankProfit .sold{
+    width: 15%;
+}
+
+.rankProfit .profits{
+    width:20%;
+}
+
+.rankProfit-Child{
+    box-shadow: 0 7px 25px rgba(0, 0, 0,0.1);
+    margin: 5px 0;
+    padding: 10px 0;
+    border-radius: 20px;
+}

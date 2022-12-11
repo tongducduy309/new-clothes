@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Chăm sóc khách hàng | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="../img/logo.png"/>
+    <script src="../vendor/vue.js"></script>
+    <link rel="stylesheet" href="../customerCare/style_policyReturnsWarranty.css">
+    <link href="../fonts/AlumniSansPinstripe.css" rel="stylesheet">
+    <link href="../fonts/YanoneKaffeesatz.css" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/aos.css" />
+    <script src="../vendor/aos.js"></script>
+    <link rel="stylesheet" href="../css/style_main.css">
+    <link rel="stylesheet" href="../css/now-ui-dashboard.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="childOfPage"></div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="../img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="../index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="rightNav-left">
+                        <div class="areaSearch">
+                            <div class="search">
+                                <input type="text" placeholder="Tìm kiếm" id="content">
+                                <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="rightNav-right">
+                        <ul class="option" id="option">
+                            <li @click="clickProfile" id="buttonProfile"><i class="now-ui-icons users_single-02"></i></li>
+                            <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                            <li @click="clickLogout" id="buttonLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                        </ul>
+                        <span id="nameAccount"></span>
+                    </div>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>     
+    <div id="toast"></div>
+    <div class="currentpath" data-aos="fade-left">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../customerCare.html">Chăm sóc khách hàng</a>
+        <a href=""id="current">CHÍNH SÁCH ĐỔI TRẢ & BẢO HÀNH</a>
+    </div>
+    <div class="Noidung">
+        <h1 class="titleHead" data-aos="fade-left">CHÍNH SÁCH ĐỔI TRẢ & BẢO HÀNH </h1>
+        <div class="TieuDe" data-aos="fade-up">
+            <h2 class="part">CHÍNH SÁCH ĐỔI TRẢ</h2>
+            <h1 style="margin-bottom: 30px;">1. Điều kiện đổi hàng</h1>
+            <h2>- Đối với sản phẩm áo quần, thời gian đổi hàng trong vòng 7 ngày kể từ ngày khách hàng nhận bưu phẩm.
+                <br> <br>
+                - Đối với sản phẩm phụ kiện (ba lô, dép, mũ,…), thời gian đổi hàng trong vòng 30 ngày kể từ ngày khách hàng nhận bưu phẩm.
+                <br> <br>
+                - Áp dụng đổi hàng với tất cả các sản phẩm và sản phẩm được đổi phải còn nguyên nhãn mác, trong tình trạng chưa qua sử dụng.
+                <br> <br>
+                - Áp dụng 01 lần đổi/ 01 đơn hàng.
+                <br> <br>
+                - Với trường hợp sản phẩm bị cắt tag, trong vòng 1 ngày kể từ ngày nhận bưu phẩm, bạn hãy gửi phản hồi về tụi mình để được giải quyết. Qua mốc thời gian 1 ngày chúng mình sẽ không giải quyết đơn đổi trả.
+                <br> <br>
+                - Sản phẩm đổi phải có giá trị tương đương hoặc cao hơn sản phẩm được đổi. Vui lòng thanh toán chi phí chênh lệch giá trị sản phẩm nếu có.
+                <br> <br>
+                - Trường hợp hoàn lại giá trị đơn hàng, tụi mình sẽ hoàn tiền trong vòng 48h làm việc sau khi nhận được yêu cầu từ các bạn.
+                <br> <br>
+                - Áp dụng với các đơn hàng trên toàn hệ thống của New Clothes (Website, FB & IG, TMĐT & cửa hàng).
+                <br> <br>
+                <br> 
+                Lưu ý: 
+                <br> <br>
+                - Bạn vui lòng gửi cho chúng mình clip đóng gói hàng đổi trả của bạn, nhân viên tư vấn sẽ xác nhận và tiến hành lên đơn đổi trả cho bạn.</h2>
+            <h1 style="margin-bottom: 30px;">2. Dịch vụ đổi hàng tận nơi</h1>
+            <h2>Nhận biết được sự bất tiện khi cần đổi sản phẩm do không vừa là một khó khăn, khi bạn phải mang hàng ra bưu cục và chờ đợi một thời gian để nhận lại món đồ ưng ý của mình.
+                <br> <br>
+                Nhằm mang lại cho bạn sự tiện lợi và những trải nghiệm tuyệt vời khi mua hàng, tụi mình đã phát triển dịch vụ đổi hàng tận nơi:
+                <br> <br>
+                - Đổi hàng tận nơi, shipper sẽ đến tận nhà để đổi hàng cho bạn.
+                <br> <br>
+                - Áp dụng 01 lần đổi/ 01 đơn hàng.
+                <br> <br>
+                - Áp dụng đổi hàng với tất cả các sản phẩm,thời gian đổi hàng trong vòng 7 ngày với áo quần, 30 ngày với phụ kiện kể từ ngày bạn nhận bưu phẩm.
+                <br> <br>
+                - Chi phí vận chuyển khi đổi hàng được New Clothes hỗ trợ 1 chiều cho bạn (bạn chỉ cần thanh toán phí ship khi nhận sản phẩm đúng) và 2 chiều đối với sản phẩm do lỗi sản xuất.</h2>
+            <h1 style="margin-bottom: 30px;">3. Chi phí vận chuyển</h1> 
+            <h2>a. Chi phí vận chuyển khi đổi hàng được New Clothes hỗ trợ:
+                <br> <br>
+                - Miễn phí khi đổi sang size phù hợp với bạn vì chúng mình mong muốn bạn có trải nghiệm sản phẩm trực tiếp như tại cửa hàng.
+                <br> <br>
+                - 1 chiều cho bạn đối với trường hợp bạn muốn đổi sang sản phẩm khác theo mong muốn (lỗi không phải do nhà sản xuất).
+                <br> <br>
+                - 2 chiều đối với sản phẩm do lỗi sản xuất, giao nhầm (lỗi do nhà sản xuất).
+                <br> <br>
+                b. Chi phí vận chuyển không được New Clothes hỗ trợ:
+                <br> <br>
+                - Với sản phẩm trong chương trình khuyến mãi, nếu bạn muốn đổi sang sản phẩm khác phải tự chi trả chi phí vận chuyển.</h2>
+            <h1 style="margin-bottom: 30px;">4. Quy trình đổi hàng:</h1>
+            <h2>Không rườm rà, chỉ với 2 bước đơn giản sau:
+                <br> <br>
+                + Bước 1: Nhắn tin cho các kênh Social hoặc Shopee, Lazada hoặc hotline chính thức của New Clothes cung cấp thông tin địa chỉ của bạn: Họ tên, số điện thoại, địa chỉ và video gói hàng unbox gói hàng.
+                <br> <br>
+                + Bước 2: Sau khi xác nhận đổi hàng, tụi mình sẽ gửi đơn hàng mới về địa chỉ của bạn. Bạn chỉ cần gửi hàng cần đổi trả cho shipper.
+                <br> <br>
+                <br> 
+                Tham khảo cách thức quay video unbox sản phẩm:
+                <br> <br>
+                + Clip rõ nét, trung thực quay từ cảnh kiểm tra bề mặt của gói hàng, lúc mở đến kiểm tra hàng.
+                <br> <br>
+                + Clip không cắt ghép, không chỉnh sửa
+                <br> <br>
+                + Clip quay rõ được thông tin trên bưu phẩm: Tên người nhận, mã đơn hàng, địa chỉ, số điện thoại.
+                <br> <br>
+                <br> 
+                Lưu ý:
+                <br> <br>
+                - Chính sách hoàn tiền này áp dụng tùy trường hợp với các đơn hàng từ sàn thương mại điện tử.
+                <br> <br>
+                - Đối với sản phẩm sale, bạn muốn đổi sang sản phẩm khác thì mọi khuyến mại, giảm giá sẽ không được giữ, sản phẩm mới sẽ được áp dụng giá tại website chính thức của New Clothes tại thời điểm đổi,
+                <br> <br>
+                nếu có chênh lệch giá bạn vui lòng thanh toán phần chênh lệch đó và phí giao hàng phát sinh.
+                <br> <br>
+                - Chỉ hoàn tiền với phương thức online thông qua thẻ ATM nội địa, Visa,…
+                <br> <br>
+                - New Clothes có quyền quyết định dừng việc hỗ trợ trả lại tiền cho khách hàng nếu phát hiện khách hàng sử dụng chính sách để trục lợi.
+                <br> <br>
+                <br> 
+                Mọi thắc mắc về Chính sách đổi hàng, khách hàng vui lòng gọi đến hotline <b><a href="tel:0586152003">0586152003</a></b> để được bộ phận bán hàng hướng dẫn và giải quyết.</h2>  
+            <h2 class="part">CHÍNH SÁCH BẢO HÀNH</h2>
+            <h1 style="margin-bottom: 30px;">1. Đối tượng & thời gian áp dụng:</h1>
+            <h2>- Đối với CLOTHING: Trong 14 ngày, từ ngày mua hàng theo thời gian ghi trên hoá đơn với các trường hợp bung chỉ, bung nút, kỹ thuật may, giãn cổ áo, quần,… và các trường hợp khác mà New Clothes có khả năng sửa chữa được. 
+                <br> <br>
+                Bạn sẽ được đổi sang sản phẩm mới 100%.
+                <br> <br>
+                - Chúng mình không bảo hành hình in cho tất cả sản phẩm, bạn có thể xem Hướng dẫn bảo quản/vệ sinh sản phẩm in ấn tại đây.
+                <br> <br>
+                <br> 
+                Trong quá trình sử dụng sản phẩm, mọi thắc mắc vui lòng inbox Fanpgage hoặc Hotline <b><a href="tel:0586152003">0586152003</a></b> để được tụi mình hỗ trợ nhanh chóng.</h2> 
+            <h1 style="margin-bottom: 30px;">2. Thời gian bảo hành:</h1>
+            <h2>Trong 07-20 ngày tuỳ vào tình trạng sản phẩm sau khi nhận được hàng từ bạn.</h2>
+            <h1 style="margin-bottom: 30px;">3. Hỗ trợ sau thời gian bảo hành:</h1>
+            <h2>- New Clothes vẫn tiếp tục hỗ trợ bảo hành những lỗi đơn giản trong vòng 30 ngày kể từ ngày bạn nhận hàng đã bảo hành gửi trả.
+                <br> <br>
+                - Nếu sản phẩm của bạn có lỗi quá nặng do quá trình sử dụng lâu, tụi mình sẽ tư vấn hướng sửa chữa kèm với mức phí tốt nhất để bạn có thể dễ dàng quyết định.</h2>
+            <h1 style="margin-bottom: 30px;">4. Trường hợp không được bảo hành:</h1>
+            <h2>- Lỗi do sử dụng không đúng cách như: sử dụng quá tải so với sức chứa, chịu lực, size của sản phẩm, làm cho sản phẩm thay đổi quá nhiều so với hình dạng ban đầu.
+                <br> <br>
+                - Lỗi do bảo quản không đúng quy cách như: sử dụng chất tẩy rửa mạnh để giặt và gây lem màu, phơi nắng quá lâu làm hư hại sản phẩm…
+                <br> <br>
+                - Sản phẩm hư hỏng do tác động bên ngoài, biến dạng, rách thủng, ẩm mốc, cháy hoặc do người sử dụng làm hỏng.
+                <br> <br>
+                - Sản phẩm đã qua sử dụng bị dơ bẩn, đã được sửa chữa bởi người sử dụng.
+                <br> <br>
+                - Sản phẩm đã quá hạn bảo hành.</h2>
+        </div>
+    </div>   
+    <footer class="container-fluid footer">
+        <div class="col-md-7 link-text">
+            <div class="information col-md-4">
+                <h6>THÔNG TIN CÔNG TY</h6>
+                <li><a v-bind:href = "aboutUs">Giới thiệu về NEW CLOTHES </a></li>
+            </div>
+            <div class="support col-md-4">
+                <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="policyMembership">Chính sách Membership</a></li>
+                <li><a v-bind:href="guideOrders">Hướng dẫn mua hàng</a></li>
+                <li><a v-bind:href="policyTransport">Chính sách vận chuyển</a></li>
+                <li><a v-bind:href="policyReturnsWarranty">Chính sách đổi trả & bảo hành</a></li>
+            </div>
+            <div class="services col-md-4">
+                <h6>DỊCH VỤ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="contactUs">Liên hệ chúng tôi</a></li>
+                <li><a v-bind:href="payments">Phương thức thanh toán</a></li>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="contact">
+                <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
+                <ul>
+                    <li><a v-bind:href="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a v-bind:href="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a v-bind:href="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+            <div class="sendMail">
+                <h6>ĐĂNG KÝ NHẬN EMAIL TỪ NEW CLOTHES</h6>
+                <div class="send col-md-12">
+                    <input type="email" class="value col-md-8" placeholder="Địa chỉ email của bạn" id="inputEmailFromCustomer">
+                    <input type="submit" value="ĐĂNG KÝ" class="submit col-md-4" id="submitEmailFromCustomer">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12"><p>
+            Copyright &copy;2022 by Tống Đức Duy | Lê Trung Kiên | Lê Bùi Minh Khoa
+        </p></div>
+    </footer>
+    <script src="../js/main.js" type="module"></script>   
+</body>
+</html>

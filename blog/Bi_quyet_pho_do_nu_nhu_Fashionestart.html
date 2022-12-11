@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Blog | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="/img/logo.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style_bi_quyet_phoi_do_nu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="../css/style_main.css">
+    <link rel="stylesheet" href="../css/now-ui-dashboard.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="childOfPage"></div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="../img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="../index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="areaSearch">
+                        <div class="search">
+                            <input type="text" placeholder="Tìm kiếm" id="content">
+                            <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                        </div>
+                    </div>
+                    <ul class="option" id="option">
+                        <li @click="clickProfile" ><i class="now-ui-icons users_single-02"></i></li>
+                        <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                        <li @click="clickLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                    </ul>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs" id="currentOpen">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div id="toast"></div>
+    <div class="currentpath" data-aos="fade-left">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../blog.html">Blog</a>
+        <a href="" id="current">Bí quyết phối đồ nữ không hề kém cạnh các fashionista</a>
+    </div>
+
+    <div class="content-section-5">
+        <h4 class="section-sub-heading-4" data-aos="fade-down">Bí quyết phối đồ nữ không hề kém cạnh các fashionista</h4>
+        <div class="section2">
+            <p>Fashionista được biết đến là một người đi đầu trong xu hướng thời trang, khả năng phối đồ và biến đổi không ngừng. Đây là phong cách không phải ai cũng có thể làm được trong nền thời trang phát triển hiện nay. Để giúp bạn “hóa thân” trong những bộ trang phục đẹp mắt, không bị “ô dề” trước bạn bè xung quanh. Hãy cùng Lì Ven tìm hiểu bí quyết phối đồ nữ không hề kém cạnh các fashionista trong bài viết này nhé!</p>
+            <h3>1. Tìm hiểu sở thích phong cách thời trang của bản thân</h3>
+        </div>
+        <img src="../img/tim-hieu-phong-cach-thoi-trang-cua-ban-than-1.png" >
+        <div class="section2">
+            <p>Với những mẫu thời trang đa dạng hiện nay, bạn muốn sở hữu phong cách thời trang cá tính nhưng “e ngại” trước style độc lạ, hay thích sự đơn giản mộc mạc giữa môi trường đầy năng động. Để Lì Ven bật mí tips định hướng “gu”  thời trang theo xu hướng hiện nay.</p>
+            <h5>1.1. Phong cách thời trang cá tính</h5>
+        </div>
+        <img src="../img/phong-cach-thoi-trang-ca-tinh.png">
+        <div class="section2">
+            <p>“Cá tính” là đặc điểm riêng biệt của mỗi người, giúp tạo ra ấn tượng mạnh mẽ. Phối đồ theo những gì bạn thích, những trang phục mang nét riêng của bản thân sẽ mang lại gu thẩm mỹ riêng dành cho mình.</p>
+            <p>Do đó, nếu bạn cảm thấy sở thích thời trang của mình mang đến khác biệt so với bạn bè, chắc chắn phong cách thời trang cá tính sẽ phù hợp nhất dành cho bạn đúng không nào?</p>
+            <h5>1.2. Phong cách đơn giản</h5>
+        </div class="section2">
+        <img src="../img/phong-cach-thoi-trang-don-gian.png">
+        <div class="section2">
+            <p>Phong cách tối giản trong thời trang hướng đến sự đơn giản nhất thể hiện qua các đường nét thiết kế của trang phục, cách phối đồ, phụ kiện đi kèm hay những gam màu đơn sắc giản dị.</p>
+            <p>Thời trang phong cách minimalism mang đến cách ăn mặc mới. Sắc sảo hơn, tiết kiệm hơn và tiện dụng hơn. Phong cách thời trang này phù hợp cho những ai muốn nhanh chóng, tiện lợi trong cách phối đồ.</p>
+            <h3>2. Bí quyết phối đồ nữ chuẩn fashionista</h3>
+        </div>
+        <img src="../img/phong-cach-thoi-trang-vintage.png">
+        <div class="section2">
+            <p>Mặc dù, các bạn trẻ thời nay luôn bắt kịp xu hướng thời trang đẹp mắt trên thị trường, nhưng phong cách thời trang cổ xưa Vintage vẫn là một trong những phong cách đáng chú ý, không bị lỗi thời theo thời gian.</p>
+            <p>Thời trang Vintage được biết đến là chiếc đầm xòe duyên dáng, các họa tiết nổi bật như hoa, chấm bi, ren ở phần cổ áo hay ống tay, kết hợp với chiếc thắt lưng mô hình nhỏ tạo điểm nhấn đặc biệt, phong cách giản dị, đơn sơ, lịch sự cho người con gái.</p>
+            <p>Để phối đồ với trang phục Vintage này, phụ nữ chúng ta cần mang theo một ví cầm tay cổ điển, đôi giày cao gót, đem đến bề ngoài mảnh mai, tinh tế “tiểu thư nhà giàu”. Bên cạnh đó, nếu bạn không thích nhẹ nhàng, hãy lựa chọn váy Vintage có gam màu sáng, áo croptop ôm sát body, điều đó sẽ giúp bạn năng động và hiện đại hơn trong mắt người nhìn.</p>
+            <p>Nếu bạn muốn đơn giản nhưng nổi bật, hãy thử ngay phong cách phối đồ thời trang Vintage!</p>
+            <h5>2.2. Phong cách thời trang Chic</h5>
+        </div>
+        <img src="../img/phong-cach-thoi-trang-chic.png">
+        <div class="section2">
+            <p>Bohemian là phong cách thời trang của hiện đại, sang trọng. Nếu bạn có phong cách thời trang hiện đại, cá tính, những item phụ kiện thời trang cho phong cách Chic này hoàn toàn phù hợp dành cho bạn.</p>
+            <p>Vậy những set đồ nào phù hợp với phong cách thời trang này?</p>
+            <p>Một chiếc áo khoác “cực chất” chính là điểm nhấn đặc biệt cho trang phục. Nên lựa chọn áo khoác dài, cho màu sắc tươi sáng, họa tiết nổi bật. Sử dụng áo len hoặc áo sơ mi form chuẩn để mặc bên trong. Đối với quần, bạn lựa chọn kiểu formal, đơn giản, hay một chiếc quần skinny jeans, kết hợp với đôi giày boots. Chắc chắn bạn bè sẽ không rời mắt khỏi bạn bởi vẻ đẹp “mười điểm” này.</p>
+            <h5>2.3. Phong cách thời trang tối giản</h5>
+        </div>
+        <img src="../img/phong-cach-thoi-trang-toi-gian-1.png">
+        <div class="section2">
+            <p>Khác với cách phối đồ mang tính hiện đại, cá tính hay cổ xưa,…phong cách thời trang tối giản (minimalism) mang đến vẻ đẹp đơn giản, không quá cầu kỳ trên trang phục của mình. Nếu bạn muốn dễ dàng trong việc lựa chọn màu sắc cho mình, vừa tiện lợi nhưng vẫn mang vẻ đẹp thanh lịch, hãy thử ngay phong cách thời trang tối giản này nhé.</p>
+            <p>Để phối đồ dễ hơn trong phong cách minimalism này, hãy lựa chọn trang phục có màu sắc trung tính, không quá nổi bật, đặc biệt nên lựa chọn màu sắc cơ bản trắng và đen, 2 màu sắc an toàn theo phong cách thời trang tối giản này.</p>
+            <p>Với cách phối đồ này khá đơn giản, bạn chỉ cần chú trọng vào những đường nét tạo hình ấn tượng trên set đồ để bạn tự tin hơn khi gặp người khác nhé.</p>
+            <h5>2.4. Phối đồ nữ chuẩn phong cách thể thao</h5>
+        </div>
+        <img src="../img/phong-cach-thoi-trang-the-thao.png">
+        <div class="section2">
+            <p>Vẻ đẹp thân thiện, thoải mái, năng động, quyến rũ sẽ là điểm nhấn đặc biệt khi bạn phối đồ theo phong cách thể thao này. Nếu bạn muốn “cháy” trong mùa hè này, phong cách thời trang thể thao (Sporty) sẽ xuất hiện ngay trong tâm trí bạn ngay bây giờ.</p>
+            <p>Để phối đồ bắt mắt theo phong cách thời trang này, bạn cần trang bị thêm áo hoodie hoặc áo khoác varsity form rộng cho thân hình của mình, kết hợp với áo bra thể thao bên trong,  quần jogger đẹp mắt, cùng đôi giày sneaker năng động. Một phong cách cực kỳ sành điệu làm “u mê” ánh nhìn của các chàng trai xung quanh. Hãy thử ngay để cảm nhận điều bất ngờ này nhé!</p>
+            <h5>2.5. Phong cách thời trang Rocker</h5>
+        </div>
+        <img src="../img/phong-cach-thoi-trang-rocker.png">
+        <div class="section2">
+            <p>Một phong cách thời trang đường phố, phong cách ngôi sao rocker thực thụ. Cách phối đồ này phù hợp cho những ai yêu thích cá tính, năng động đường phố ở lứa tuổi thanh thiếu niên.</p>
+            <p>Các phụ kiện cần thiết để phối đồ theo phong cách này bao gồm: áo phông vintage, một chiếc quần jeans rách, bên ngoài khoác lên áo khoác da, cách phối đồ mang đậm chất rocker cá tính dành cho bạn.</p>
+            <p>Bên cạnh đó, bạn có thể phối chiếc áo phông in hình hoặc chữ, áo thun theo xu hướng hiện đại, kết hợp với quần short jeans hay quần vải da.</p>
+            <p>Phụ kiện kính, túi xách với gam màu đen sẽ giúp bạn cực kỳ nổi bật khi đi dạo phố đấy.</p>
+            <p>Với 5 phong cách phối đồ đặc biệt phổ biến hiện nay, Lì Ven hy vọng rằng sẽ mang đến những màu sắc fashionista dành riêng cho bạn. Nếu bạn mong muốn thay đổi phong cách thời trang riêng cho mình, hãy thử những trang phục mang phong cách trên để thể hiện độ “chất chơi” của bạn nhé.</p>
+            <p>Còn đợi gì mà không lên đồ nào các bạn!</p>
+        </div>
+    </div>
+    <footer class="container-fluid footer">
+        <div class="col-md-7 link-text">
+            <div class="information col-md-4">
+                <h6>THÔNG TIN CÔNG TY</h6>
+                <li><a v-bind:href = "aboutUs">Giới thiệu về NEW CLOTHES </a></li>
+            </div>
+            <div class="support col-md-4">
+                <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="policyMembership">Chính sách Membership</a></li>
+                <li><a v-bind:href="guideOrders">Hướng dẫn mua hàng</a></li>
+                <li><a v-bind:href="policyTransport">Chính sách vận chuyển</a></li>
+                <li><a v-bind:href="policyReturnsWarranty">Chính sách đổi trả & bảo hành</a></li>
+            </div>
+            <div class="services col-md-4">
+                <h6>DỊCH VỤ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="contactUs">Liên hệ chúng tôi</a></li>
+                <li><a v-bind:href="payments">Phương thức thanh toán</a></li>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="contact">
+                <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
+                <ul>
+                    <li><a v-bind:href="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a v-bind:href="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a v-bind:href="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+            <div class="sendMail">
+                <h6>ĐĂNG KÝ NHẬN EMAIL TỪ NEW CLOTHES</h6>
+                <div class="send col-md-12">
+                    <input type="email" class="value col-md-8" placeholder="Địa chỉ email của bạn" id="inputEmailFromCustomer">
+                    <input type="submit" value="ĐĂNG KÝ" class="submit col-md-4" id="submitEmailFromCustomer">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12"><p>
+            Copyright &copy;2022 by Tống Đức Duy | Lê Trung Kiên | Lê Bùi Minh Khoa
+        </p></div>
+    </footer>
+    <script src="../js/main.js" type="module"></script>
+
+</body>
+</html>

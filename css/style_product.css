@@ -1,0 +1,228 @@
+body{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    user-select: none;
+}
+:root{
+    --valueSwipe:0%;
+}
+
+section{
+    margin-bottom: 40px;
+}
+li{
+    list-style: none;
+}
+
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to{
+        opacity: 0;
+    }
+}
+
+.groupPrice{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: bold;
+    
+}
+.countProduct{
+    display: flex;
+    align-items: center;
+}
+.countProduct h4{
+    margin-right: 10px;
+}
+.countProduct input{
+    text-align: center;
+    font-weight: bold;
+    cursor: default;
+    border: none;
+    outline: 0;
+}
+.countProduct li{
+    cursor: pointer;
+}
+.choiceSize select{
+    width: 50%;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgb(198, 198, 198);
+    
+}
+
+.button{
+    position: relative;
+    width: 50%;
+    height: 30px;
+    background-color: #757272;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    z-index: 3;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.main img{
+    width: 100%;
+    object-fit: contain;
+    transition: 1s ease;
+    
+    
+}
+
+.main #name{
+    font-size: 40px;
+}
+
+.groupPrice .price{
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #959292;
+    margin-right: 5px;
+}
+
+.main #color{
+    font-size: 20px;
+}
+
+.main .countProduct{
+    font-size: 20px;
+}
+
+.main .choiceSize h3{
+    font-size: 30px;
+}
+
+.groupPrice .priceSale{
+    font-size: 30px;
+}
+
+.pic_hidden{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    
+}
+
+section .title{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+.content{
+    border-bottom: 1px solid #e4e4e4;
+    border-top: 1px solid #e4e4e4;
+    padding: 10px 0;
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
+.content span{
+    display: none;
+    min-height: 0;
+    
+}
+
+.activeContent{
+    display: block;
+}
+
+.others{
+    border-top: thin solid #cecece;
+}
+
+.swipe{
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin: 20px 0;
+    
+}
+
+.others .value{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #bfbfbf;
+}
+
+.others .value::before{
+    position: absolute;
+    content: '';
+    background-color: #009eff;
+    width: var(--valueSwipe);
+    height: 1px;
+}
+
+.listProduct{
+    top: 20px;
+    width: max-content;
+    overflow: hidden;
+    padding-right: 30px;
+}
+
+.listProduct .item .price{
+    font-size: 18px;
+}
+
+.listProduct .item .priceSale{
+    font-size: 20px;
+    font-size: bold;
+}
+
+
+.item{
+    cursor: pointer;
+    padding: 10px 47px;
+    user-select: none;
+    margin: 0 10px;
+    width: 300px;
+    height: max-content;
+    display: inline-block;
+}
+
+.item:hover{
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.listColor{
+    display: flex;
+    width: 100%;
+    
+}
+
+.itemColor{
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(179, 179, 179);
+    margin: 0 1px;
+    cursor: pointer;
+}
+.item img{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.item h4{
+    font-size: 14px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}

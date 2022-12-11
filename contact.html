@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<htlm>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <title>Contact | NEW CLOTHES</title>
+        <link rel="shortcut icon" type="image/png" href="./img/logo.png"/>
+        <script src="./vendor/vue.js"></script>
+        <link rel="stylesheet" href="./css/style_contact.css">
+        <link href="./fonts/AlumniSansPinstripe.css" rel="stylesheet">
+        <link href="./fonts/YanoneKaffeesatz.css" rel="stylesheet">
+        <link rel="stylesheet" href="./vendor/aos.css" />
+        <script src="./vendor/aos.js"></script>
+        <link rel="stylesheet" href="./css/style_main.css">
+        <link rel="stylesheet" href="./css/now-ui-dashboard.css">
+        
+    </head>
+
+    <body>
+        <div id="loader">
+            <div class="groupDot">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+        <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="./img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="./index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="rightNav-left">
+                        <div class="areaSearch">
+                            <div class="search">
+                                <input type="text" placeholder="Tìm kiếm" id="content">
+                                <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="rightNav-right">
+                        <ul class="option" id="option">
+                            <li @click="clickProfile" id="buttonProfile"><i class="now-ui-icons users_single-02"></i></li>
+                            <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                            <li @click="clickLogout" id="buttonLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                        </ul>
+                        <span id="nameAccount"></span>
+                    </div>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs" id="currentOpen">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>   
+    <div class="currentpath" data-aos="fade-left">
+        <a href="./index.html">Trang chủ</a>
+        <a href="" id="current">Liên hệ</a>
+    </div>
+    <div id="toast"></div>
+    <div class="container">
+        <div class="row">
+            <div class="part-1 col-md-9">
+                <div class="content">
+                    <h1 data-aos="fade-down">THÔNG TIN HỆ THỐNG CỬA HÀNG NEW CLOTHES</h1>
+                    <p data-aos="flip-left">Đăng bởi: Team KDK | 10/01/2022</p>
+                    
+                    <h2 data-aos="zoom-in"> HỆ THỐNG CỬA HÀNG </h2>
+                    <h3 data-aos="flip-left"> CHI NHÁNH HỒ CHÍ MINH</h3>
+                    <p data-aos="fade-right">842 Sư Vạn Hạnh, Phường 12, Quận 10, HCM </p>
+                    <p data-aos="fade-right">136 Nguyễn Hồng Đào, Phường 14, Quận Tân Bình</p>
+                    <p> ---- </p>
+                    <h3 data-aos="flip-left">CHI NHÁNH HÀ NỘI:</h3>
+                    <p data-aos="fade-right">49-51 Hồ Đắc Di, Phường Nam Đồng, Quận Đống Đa</p>
+                    <p style="font-weight: bold;" data-aos="fade-right">0903 311 603 - 0938 765 997</p>
+                </div>
+                <div class="contactsocialmedia">
+                    <p>Chia sẻ bài viết</p>
+                    <button><li><i class="fa-brands fa-facebook-f"></i></li></button>
+                    <button><li><i class="fa-brands fa-google-plus-g"></i></li></button>
+                    <button><li><i class="fa-solid fa-envelope"></i></li></button>           
+                </div>
+                <hr>
+                    <div class="postOthers">
+                    <h6>BÀI VIẾT LIÊN QUAN</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div>
+                                <img src="./img/z3750378810575_1772f39731a2576b3a6b37c829c9094e.jpg" alt="Ảnh khoa đẹp zai">
+                                
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div>
+                                <img src="./img/z3750378811227_1594b9bfed433228d78efd1243375452.jpg" alt="Ảnh khoa đẹp zai">
+                                
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div>
+                                <img src="./img/z3750378810575_1772f39731a2576b3a6b37c829c9094e.jpg" alt="Ảnh khoa đẹp zai">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                
+            </div>
+            <div class="part-2 col-md-3" data-aos="fade-left">
+                    <h3>LIÊN HỆ</h3>
+                    <hr>
+                    <ul class="contactLeadShop">
+                        <li>Hotline:<a href="tel:0586152003">0586152003</a></li>
+                        <li>Email:<a href="mailto:TeamCustomerCare@newclothes.vn">TeamCustomerCare@newclothes.vn</a></li>
+                        <li>Nhắn tin:<a href="https://www.facebook.com/messages/t/100045997609291">Messenger</a></li>
+                        <li>Mở cửa:<span>Thứ 2 - Chủ Nhật</span></li>
+                    </ul>
+                    <hr>
+                    <div class="link">
+                    
+                    </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid footer">
+        <div class="col-md-7 link-text">
+            <div class="information col-md-4">
+                <h6>THÔNG TIN CÔNG TY</h6>
+                <li><a v-bind:href = "aboutUs">Giới thiệu về NEW CLOTHES </a></li>
+            </div>
+            <div class="support col-md-4">
+                <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="policyMembership">Chính sách Membership</a></li>
+                <li><a v-bind:href="guideOrders">Hướng dẫn mua hàng</a></li>
+                <li><a v-bind:href="policyTransport">Chính sách vận chuyển</a></li>
+                <li><a v-bind:href="policyReturnsWarranty">Chính sách đổi trả & bảo hành</a></li>
+            </div>
+            <div class="services col-md-4">
+                <h6>DỊCH VỤ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="contactUs">Liên hệ chúng tôi</a></li>
+                <li><a v-bind:href="payments">Phương thức thanh toán</a></li>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="contact">
+                <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
+                <ul>
+                    <li><a v-bind:href="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a v-bind:href="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a v-bind:href="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+            <div class="sendMail">
+                <h6>ĐĂNG KÝ NHẬN EMAIL TỪ NEW CLOTHES</h6>
+                <div class="send col-md-12">
+                    <input type="email" class="value col-md-8" placeholder="Địa chỉ email của bạn" id="inputEmailFromCustomer">
+                    <input type="submit" value="ĐĂNG KÝ" class="submit col-md-4" id="submitEmailFromCustomer">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12"><p>
+            Copyright &copy;2022 by Tống Đức Duy | Lê Trung Kiên | Lê Bùi Minh Khoa
+        </p></div>
+    </footer>
+       
+    <script src="./js/main.js" type="module"></script>
+
+    </body>
+</htlm>

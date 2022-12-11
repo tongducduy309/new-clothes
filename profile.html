@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Trang cá nhân | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="./img/logo.png"/>
+    <script src="./vendor/vue.js"></script>
+    <link rel="stylesheet" href="./css/style_profile.css">
+    <link href="./fonts/AlumniSansPinstripe.css" rel="stylesheet">
+    <link href="./fonts/YanoneKaffeesatz.css" rel="stylesheet">
+    <link rel="stylesheet" href="./vendor/aos.css" />
+    <script src="./vendor/aos.js"></script>
+    <link rel="stylesheet" href="./css/style_main.css">
+    <link rel="stylesheet" href="./css/now-ui-dashboard.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="./img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="./index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="rightNav-left">
+                        <div class="areaSearch">
+                            <div class="search">
+                                <input type="text" placeholder="Tìm kiếm" id="content">
+                                <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="rightNav-right">
+                        <ul class="option" id="option">
+                            <li @click="clickProfile" id="buttonProfile"><i class="now-ui-icons users_single-02"></i></li>
+                            <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                            <li @click="clickLogout" id="buttonLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                        </ul>
+                        <span id="nameAccount"></span>
+                    </div>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>  
+    <div id="tab"></div>
+    <div id="toast"></div>
+    <div class="page">
+        
+        <div class="leftPage" data-aos="fade-right">
+            <h1 class="titleHead">HỒ SƠ CÁ NHÂN</h1>
+            <div class="buttonGroup">
+                <div class="buttonTab" id="btnProfile" aria-valuetext="0">
+                    <span>THÔNG TIN CÁ NHÂN</span>
+                </div>
+                <div class="buttonTab" id="btnStatusDelivery" aria-valuetext="1">
+                    <span>TÌNH TRẠNG ĐƠN HÀNG</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="rightPage" data-aos="zoom-in">
+            <h1 class="titleHead titleView">THÔNG TIN CÁ NHÂN</h1>
+            <div id="profile" class="viewChild">
+                <div class="profile-body">
+                    <div class="contentTab">
+                        <span>Tên đăng nhập: </span>
+                        <span class="data">tongducduy</span>
+                    </div>
+                    <div class="contentTab">
+                        <span>Mật khẩu: </span>
+                        <div class="boxPassword">
+                            <input type="password" readonly value="tongducduy" onCopy="return false" id="passwordCustomer" class="data">
+                            <i class="fa-regular fa-eye-slash" id="togglePassword"></i>
+                        </div>
+                    </div>
+                    <div class="contentTab">
+                        <span>Họ và tên: </span>
+                        <span class="data"></span>
+                    </div>
+                    <div class="contentTab">
+                        <span>Số điện thoại: </span>
+                        <span class="data"></span>
+                    </div>
+                    <div class="contentTab">
+                        <span>Địa chỉ: </span>
+                        <span class="data"></span>
+                    </div>
+                    <div class="contentTab point" >
+                        <span>Tích điểm: </span>
+                        <span class="data">1000</span>
+                    </div>
+                    <div class="contentTab">
+                        <span>Hạng: </span>
+                        <span class="data">Vàng</span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="statusDeliveryOfCustomer" class="viewChild">
+                <div class="filterStatus btnFilter" id="filterStatus">
+                </div>
+                <div class="cartCustomer" >
+                    <div class="titleCol">
+                        <span class="idDelivery">Mã kiện hàng</span><span class="countDelivery">Số lượng</span><span class="priceDelivery">Tổng tiền</span><span class="statusDelivery">Trạng thái</span>
+                    </div>
+                    <div id="delivery-body">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/profile.js" type="module">
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+h1{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+h2{
+    font-size: 18px;
+    color: #000;
+}
+
+.titleHead{
+    text-align: center;
+}
+
+.Noidung{
+    display: block;
+    width: 100%;
+    padding-left: 15px;
+}
+.Noidung span{
+    width: 100%;
+    margin: 50px 0;
+    font-size: 14px;
+    display: block;
+    text-align: center ;
+    color: black;
+}
+
+.Noidung .TieuDe h1{
+    
+    color: #000;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 16px;
+    display: block;
+    text-align:left ;
+    
+}
+.TieuDe img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width:100%;
+    object-fit: cover;
+}

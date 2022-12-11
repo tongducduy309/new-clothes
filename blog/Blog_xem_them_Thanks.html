@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Blog | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="/img/logo.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style_blog_xem_them_Thanks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="../css/style_main.css">
+    <link rel="stylesheet" href="../css/now-ui-dashboard.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="childOfPage"></div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="../img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="../index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="areaSearch">
+                        <div class="search">
+                            <input type="text" placeholder="Tìm kiếm" id="content">
+                            <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                        </div>
+                    </div>
+                    <ul class="option" id="option">
+                        <li @click="clickProfile" ><i class="now-ui-icons users_single-02"></i></li>
+                        <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                        <li @click="clickLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                    </ul>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs" id="currentOpen">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div id="toast"></div>
+    <div class="currentpath" data-aos="fade-left">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../blog.html">Blog</a>
+        <a href="" id="current">THANK YOU, LOVE YOU 300K</a>
+    </div>
+    <div class="content-section-2">
+            <h4 class="section-heading-2">THANK YOU, LOVE YOU 300K</h4>
+            <div class="section-sub-heading-2">
+                <p><br>THANK YOU, LOVE YOU 300K 💙</br</p>
+                <p><br>Cùng team Levents® đếm ngược thời khắc Instagram @levents.official chạm mốc 300K followers!!!</br></p>
+                <p><br>Cảm ơn bạn ‑ một trong số 283.000 thành viên của gia đình Levents®, đã luôn ở bên cạnh tin tưởng và ủng hộ chúng mình trong suốt khoảng thời gian qua. Levents® tin rằng khoảng cách đến cột mốc 300.000 followers sẽ không xa khi tụi mình có bạn, song hành với niềm tin yêu và ủng hộ hết lòng của tất cả mọi người. Đây chính là món tài sản vô giá mà tập thể team Levents® có được!</br></p> 
+                <P><br>Cùng Levents® lan tỏa niềm vui này khắp mọi nơi nha,</br></P>
+                <p>Love you 300K.</p>
+                <p class="color">#Levents #LoveYou300k</p>
+            </div>  
+    </div>
+        
+    <div class="picture">
+    <!-- <div class="row"> -->
+        <!-- <div class="col-md-4">  -->
+            <div class="levent_300_1">
+                <img src="https://levents.asia/wp-content/uploads/2022/07/122117224_1067681617027305_6450954198216673746_n.jpeg">
+            </div>
+        <!-- </div> -->
+        
+        <!-- <div class="col-md-4">  -->
+            <div class="levent_300_1">
+                <img src="https://levents.asia/wp-content/uploads/2022/07/122058172_1067681757027291_221501920159138061_n.jpeg">
+            </div>
+        <!-- </div> -->
+
+        <!-- <div class="col-md-4">  -->
+            <div class="levent_300_1">
+                <img src="https://levents.asia/wp-content/uploads/2022/07/122114223_1067681720360628_1346125792504651612_n.jpeg">
+            </div>
+        <!-- </div>  -->
+
+    </div>
+        
+        <div class="content-section-3">
+            <p>Team Levents® luôn chăm chút từng chi tiết dù là nhỏ nhất, để mỗi sản phẩm gửi đến bạn đều chứa đựng trọn vẹn tình yêu và sự cố gắng của tụi mình ✨Cảm ơn bạn đã luôn ở bên cạnh đồng hành cùng Levents®! </p>
+        </div>
+
+        <div class="picture2">
+            <!-- <div class="row"> -->
+                <!-- <div class="col-md-4">  -->
+                    <div class="levent_300_2">
+                        <img src="../img/123218993_1076154616180005_2003073362585706610_n.jpeg">
+                    </div>
+                <!-- </div> -->
+                
+                <!-- <div class="col-md-4">  -->
+                    <div class="levent_300_3">
+                        <img src="../img/123145878_1076154636180003_5653497440869614680_n.jpeg">
+                    </div>
+                <!-- </div> -->
+        
+                <!-- <div class="col-md-4">  -->
+                    <div class="levent_300_2">
+                        <img src="../img/122456466_1068447800284020_1144609899064034819_n.jpeg">
+                    </div>
+                <!-- </div>  -->
+            
+        </div>
+ 
+        <div class="content-section-3">
+            <p>Sự tin tưởng và ủng hộ của các bạn là tài sản quý giá của tụi mình, cũng chính là niềm tự hào lớn nhất của Levents®</p>
+        </div>
+        <footer class="container-fluid footer">
+            <div class="col-md-7 link-text">
+                <div class="information col-md-4">
+                    <h6>THÔNG TIN CÔNG TY</h6>
+                    <li><a v-bind:href = "aboutUs">Giới thiệu về NEW CLOTHES </a></li>
+                </div>
+                <div class="support col-md-4">
+                    <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                    <li><a v-bind:href="policyMembership">Chính sách Membership</a></li>
+                    <li><a v-bind:href="guideOrders">Hướng dẫn mua hàng</a></li>
+                    <li><a v-bind:href="policyTransport">Chính sách vận chuyển</a></li>
+                    <li><a v-bind:href="policyReturnsWarranty">Chính sách đổi trả & bảo hành</a></li>
+                </div>
+                <div class="services col-md-4">
+                    <h6>DỊCH VỤ KHÁCH HÀNG</h6>
+                    <li><a v-bind:href="contactUs">Liên hệ chúng tôi</a></li>
+                    <li><a v-bind:href="payments">Phương thức thanh toán</a></li>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="contact">
+                    <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
+                    <ul>
+                        <li><a v-bind:href="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a v-bind:href="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a v-bind:href="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+                <div class="sendMail">
+                    <h6>ĐĂNG KÝ NHẬN EMAIL TỪ NEW CLOTHES</h6>
+                    <div class="send col-md-12">
+                        <input type="email" class="value col-md-8" placeholder="Địa chỉ email của bạn" id="inputEmailFromCustomer">
+                        <input type="submit" value="ĐĂNG KÝ" class="submit col-md-4" id="submitEmailFromCustomer">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12"><p>
+                Copyright &copy;2022 by Tống Đức Duy | Lê Trung Kiên | Lê Bùi Minh Khoa
+            </p></div>
+        </footer>
+        <script src="../js/main.js" type="module"></script>
+    
+
+    
+        
+</body>
+</html>

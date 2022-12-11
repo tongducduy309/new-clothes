@@ -1,0 +1,198 @@
+body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 14px;
+}
+li{
+    list-style: none;
+}
+input{
+    border: none;
+    outline: 0;
+}
+
+
+
+.titleHead{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+select{
+    background-color: transparent;
+    border: 1px solid rgba(112, 112, 112, 0.3);
+}
+.box{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    width: 70%;
+    display: block;
+    margin-bottom: 20px;
+
+    
+}
+
+.contain{
+    position: relative;
+    
+    width: 100%;
+}
+
+.method{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+.method>input{
+    flex: 1;
+}
+.method>i{
+    flex: 1;
+}
+.method>span{
+    flex: 7;
+}
+
+.button{
+    position: relative;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(112, 112, 112, 0.3);
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.button:hover{
+    color: #fff;
+}
+
+.input{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contentTab{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 5px;
+}
+
+.infoBill{
+    margin-top: 40px;
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+    padding-top: 20px;
+}
+
+.shopping_credit-card{
+    color: rgb(75, 192, 192);
+}
+.shopping_delivery-fast{
+    color: rgb(255, 99, 132);
+}
+
+.titleCol{
+    cursor: default;
+    height: 20%;
+}
+
+.viewCart{
+    height: 400px;
+    margin-bottom: 40px;
+    
+}
+#viewCart-body{
+    height: 80%;
+    overflow-y: auto;
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 0 10px;
+}
+.viewCart span{
+    text-align: center;
+}
+.viewCart img{
+    width: 100%;
+    object-fit: contain;
+    transition: 1s ease;
+    
+    
+}
+
+.contentCount{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.contentCount i{
+    margin: 0;
+}
+
+.contentCount input{
+    width: 50px;
+    text-align: center;
+}
+
+
+
+.viewCart .serialProduct{
+    width: 5%;
+    display: inline-block;
+}
+.viewCart .idProduct{
+    width: 8%;
+    display: inline-block;
+}
+.viewCart .imgProduct{
+    width: 20%;
+    display: inline-block;
+}
+.viewCart .nameProduct{
+    width: 30%;
+    display: inline-block;
+}
+.viewCart .colorProduct{
+    width: 10%;
+    display: inline-block;
+}
+.viewCart .countProduct{
+    width: 10%;
+    display: inline-block;
+
+}
+.viewCart .priceProduct{
+    width: 12%;
+    display: inline-block;
+}
+.viewCart .delProduct{
+    width: 5%;
+    display: inline-block;
+}
+.product{
+    display: block;
+    align-items: center;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px 0;
+    cursor: pointer;
+    height: 100%;
+    height: max-content;
+    
+}
+
+
+
+

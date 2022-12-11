@@ -1,0 +1,138 @@
+body{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+
+.button{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #757272;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    z-index: 3;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+
+
+#slider{
+   position: relative;
+   padding-top: 50%;
+   background: url('../img/products/headImg_Blog.jpg') top center / cover no-repeat;
+}
+
+#slider .text-content{
+    font-size: 5rem;
+    position: absolute;
+    bottom: 50%;
+    left: 75%;
+    text-align: center;
+    
+}
+
+#slider .text-heading{
+    font-size: 5rem;
+}
+
+.content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .section-heading{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.content .section-sub-heading{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+    opacity: 0.5;
+}
+
+.content .about-text{
+    margin-top: 25px;
+    font-size: 16.5px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.content .member-list{
+    margin-top: 48px; 
+    overflow: hidden;
+    margin-left: -48px;   
+}
+
+.content .member-list2 img{
+    height: 500px;
+    
+}
+
+.content .member-item{
+    float:left;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-left: 50px ;
+}
+
+.content .member-name{
+    font-size: 20px;
+   
+}
+
+.content .content-section img{
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 6px;  
+    transition: 1s all ease;
+}
+
+.content .content-section img:hover{
+    transform: scale(1.1);
+    cursor: pointer;  
+}
+
+/* blog section */
+.blog-section{
+    background-color: rgb(239, 239, 239);
+}
+
+
+
+.content .member-list .place-seen-btn{
+    color: black;
+    background-color: rgb(239, 239, 239);
+    text-decoration: none;
+    padding: 11px 16px;
+    border: 1px solid;
+    transition: 1s all ease;
+}
+
+.content .member-list .place-seen-btn:hover{
+    color: white;
+    background-color: black;
+}
+
+.footer{
+    margin-top: 0;
+}
+ 
+
+
+
+
+
+
+

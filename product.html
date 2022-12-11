@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <title></title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="stylesheet" href="./css/product.css">
+        <link href="./fonts/AlumniSansPinstripe.css" rel="stylesheet">
+        <link href="./fonts/YanoneKaffeesatz.css" rel="stylesheet">
+        <link rel="stylesheet" href="./vendor/aos.css" />
+        <script src="./vendor/aos.js"></script>
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/now-ui-dashboard.css">
+    </head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill">1231232132</p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="messageBox">
+        <div class="content"></div>
+    </div>
+
+        
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="./img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="./index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="rightNav-left">
+                        <div class="areaSearch">
+                            <div class="search">
+                                <input type="text" placeholder="Tìm kiếm" id="content">
+                                <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="rightNav-right">
+                        <ul class="option" id="option">
+                            <li @click="clickProfile" id="buttonProfile"><i class="now-ui-icons users_single-02"></i></li>
+                            <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                            <li @click="clickLogout" id="buttonLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                        </ul>
+                        <span id="nameAccount"></span>
+                    </div>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>   
+
+    
+    <div class="currentpath">
+        <a href="index.html">Trang chủ</a>
+        <a href="" id="current">Sản phẩm</a>
+    </div>
+    <div id="toast"></div>
+    <section class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7">
+                    <img src="https://levents.asia/wp-content/uploads/2022/10/z3787001729739_d93fdba98ff4d79094a19d850d36c696-1536x1536.jpg" alt="" id="image">
+                </div>
+                <div class="col-md-5">
+                    <h2 id="name">jhdkjasda</h2>
+                    <div class="groupPrice">
+                        <h3 id="price">405,000</h3>
+                        <h3>vn&#8363</h3>
+                    </div>
+                    
+                    <h4 id="color">Màu sắc: BLACK</h4>
+                    <div class="listColor">
+                        
+                    </div>
+                    <div class="countProduct">
+                        <h4 id="price">Số lượng: </h4>
+                        <li><i class="fa-solid fa-minus" @click="clickMinus"></i></li>
+                        <input type="text" value="1" min="min" max="max" readonly id="countProductInp">
+                        <li><i class="fa-solid fa-plus" @click="clickAdd"></i></li>
+                    </div>
+                    <div class="choiceSize">
+                        <h3>Size:</h3>
+                        <select name="" id="sort">
+                            <option value="" >Chọn size</option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                            <option value="3">C</option>
+                            <option value="4">D</option>
+                            
+                        </select>
+                    </div>
+                    <div class="button effect-for-btn-2 addToCart" @click="onClick"><p>Thêm vào giỏ</p></div>
+                    <div class="content infoProduct" @click="onClick">
+                        <h3>THÔNG TIN SẢN PHẨM</h3>
+                        <span id="contentInfo">kahkshdadkjasjk skdandlasnsanaadkdfjd sadjasoj</span>
+                    </div>
+                    <div class="content guideSize" @click="onClick">
+                        <h3>QUY ƯỚC KÍCH THƯỚC</h3>
+                        <span id="contentGuide">kahkshdadkjasjk skdandlasnsanaadkdfjd sadjasoj</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="others">
+        <h2 class="title">Có thể bạn thích</h2>
+        <div class="container">
+            <div class="row">
+                <div id="listProduct">
+                    <div class="item_pdt col-md-3">
+                        <img src="https://levents.asia/wp-content/uploads/2021/10/WHITE-2-400x500.png" alt="">
+                        <p class="name">Hình mẫu</p>
+                        <span class="price">200.000&#8363</span>
+                    </div>
+                    <div class="item_pdt col-md-3">
+                        <img src="https://levents.asia/wp-content/uploads/2021/10/WHITE-2-400x500.png" alt="">
+                        <p class="name">Hình mẫu</p>
+                        <span class="price">200.000&#8363</span>
+                    </div>
+                    <div class="item_pdt col-md-3">
+                        <img src="https://levents.asia/wp-content/uploads/2021/10/WHITE-2-400x500.png" alt="">
+                        <p class="name">Hình mẫu</p>
+                        <span class="price">200.000&#8363</span>
+                    </div>
+                    <div class="item_pdt col-md-3">
+                        <img src="https://levents.asia/wp-content/uploads/2021/10/WHITE-2-400x500.png" alt="">
+                        <p class="name">Hình mẫu</p>
+                        <span class="price">200.000&#8363</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/main.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+</html>

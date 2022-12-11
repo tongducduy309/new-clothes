@@ -1,0 +1,34 @@
+body{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+.collection{
+    text-align: center;
+}
+
+.contentCollection img{
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.part .titlePart{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.part img{
+    width: 600px;
+}
+
+.part .contentPart{
+    font-weight: bold;
+    font-size: 20px;
+}

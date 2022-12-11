@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Chăm sóc khách hàng | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="../img/logo.png"/>
+    <script src="../vendor/vue.js"></script>
+    <link rel="stylesheet" href="../customerCare/style_guideOrders.css">
+    <link href="../fonts/AlumniSansPinstripe.css" rel="stylesheet">
+    <link href="../fonts/YanoneKaffeesatz.css" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/aos.css" />
+    <script src="../vendor/aos.js"></script>
+    <link rel="stylesheet" href="../css/style_main.css">
+    <link rel="stylesheet" href="../css/now-ui-dashboard.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="childOfPage"></div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="../img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="../index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="rightNav-left">
+                        <div class="areaSearch">
+                            <div class="search">
+                                <input type="text" placeholder="Tìm kiếm" id="content">
+                                <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="rightNav-right">
+                        <ul class="option" id="option">
+                            <li @click="clickProfile" id="buttonProfile"><i class="now-ui-icons users_single-02"></i></li>
+                            <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                            <li @click="clickLogout" id="buttonLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                        </ul>
+                        <span id="nameAccount"></span>
+                    </div>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div id="toast"></div>
+    <div class="currentpath" data-aos="fade-left">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../customerCare.html">Chăm sóc khách hàng</a>
+        <a href=""id="current">Hướng dẫn mua hàng & bảo quản</a>
+    </div>
+    <div class="Noidung">
+        <h1 class="titleHead" data-aos="fade-left">HƯỚNG DẪN MUA HÀNG & BẢO QUẢN </h1>
+        <div class="TieuDe" data-aos="fade-up">
+            <h2 class="part">HƯỚNG DẪN MUA HÀNG</h2>
+            <h1 style="margin-bottom: 30px;">Hiện New Clothes hoạt động chính trên các kênh sau:</h1>
+            <h2>Facebook: New Clothes
+                <br> <br>
+                Instagram: New Clothes.official
+                <br> <br>
+                Website: New Clothes.asia
+                <br> <br>
+                TMĐT: Shopee, Lazada
+                <br> <br>
+                Cửa hàng</h2>
+            <h1 style="margin-bottom: 30px;">Hướng dẫn mua hàng tại Facebook/ Instagram</h1>
+            <h2>- Tìm kiếm và chọn sản phẩm bạn yêu thích, muốn sở hữu.
+                <br> <br>
+                - Gửi tin nhắn trực tiếp đến chatbox Facebook/ Instagram của New Clothes. Nhân viên tư vấn sẽ hỗ trợ bạn tư vấn về thông tin sản phẩm (giá, size, tình trạng hiện tại của sản phẩm,…)
+                <br> <br>
+                - Cuối cùng tụi mình sẽ gọi cho bạn và xác nhận thông tin đơn hàng và tiến hành đóng gói, vận chuyển đơn hàng.</h2>
+            <h1 style="margin-bottom: 30px;">Hướng dẫn mua hàng tại Website</h1> 
+            <h2>BƯỚC 1: Tìm kiếm và chọn sản phẩm bạn yêu thích, muốn sở hữu trên Website theo 1 trong 2 cách:
+                <br> <br>
+                - Gõ tên hoặc mã sản phẩm vào thanh tìm kiếm (Search)
+                <br> <br>
+                - Tìm theo danh mục sản phẩm dựa trên thanh menu chính
+                <br> <br>
+                Mỗi sản phẩm trên WEBSITE đều có đầy đủ thông tin sản phẩm, sizechart, hình ảnh chi tiết của sản phẩm.
+                <br> <br>
+                Tại đây, bạn có thể chọn Màu sắc, Kích cỡ và Số lượng sản phẩm muốn mua bằng cách click vào nút THÊM VÀO GIỎ.
+                <br> <br>
+                Khi bạn Click vào nút THÊM VÀO GIỎ, bên góc phải màn hình sẽ hiện ra khung box đầy đủ thông tin giỏ hàng. Bạn có thể chỉnh sửa đơn hàng (nếu có) và click vào nút THANH TOÁN trong khung box.
+                <br> <br>
+                Bạn cung cấp đầy đủ thông tin cá nhân và chọn TIẾP TỤC ĐẾN PHƯƠNG THỨC THANH TOÁN, thêm Mã giảm giá (nếu có).
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                BƯỚC 2: Tiến hành đặt hàng và thanh toán đơn hàng
+                <br> <br>
+                Trên trang thanh toán, khách hàng lưu ý điền đầy đủ thông tin bắt buộc cho đơn hàng
+                <br> <br>
+                - Thông tin người mua hàng
+                <br> <br>
+                - Phương thức vận chuyển có 2 phương thức:
+                <br> <br>
+                + Vận chuyển thông thường
+                <br> <br>
+                + Vận chuyển hỏa tốc nội thành HCM
+                <br> <br>
+                - Phương thức thanh toán có thể chọn 1 trong 2 phương thức thanh toán có sẵn:
+                <br> <br>
+                + Thanh toán khi nhận hàng bằng tiền mặt (COD).
+                <br> <br>
+                + Thanh toán khi đặt hàng bằng các loại thẻ ATM nội địa, Visa,… New Clothes
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                BƯỚC 3: Xác nhận đơn hàng
+                <br> <br>
+                - Sau khi hoàn tất quy trình mua hàng online trên website New Clothes, bạn sẽ nhận được xác nhận qua email và điện thoại trực tiếp từ New Clothes. Bạn vui lòng kiểm tra email Xác Nhận Đặt Hàng với thông tin chi tiết về đơn hàng nhé
+                <br> <br>
+                - Trường hợp có thay đổi thông tin của đơn hàng, vui lòng liên hệ trực tiếp qua Hotline <b><a href="tel:0586152003">0586152003</a></b> New Clothes</h2>
+            <h1 style="margin-bottom: 30px;">Hướng dẫn mua hàng trên sàn TMĐT</h1>
+            <h2>Truy cập app mua hàng bạn yêu thích và đến gian hàng New Clothes để chọn mua ngay món đồ bạn ưng ý nhé!</h2> 
+            <h1>Hướng dẫn mua hàng trực tiếp</h1>
+            <h2>Bạn có thể đến mua các sản phẩm New Clothes trực tiếp tại hệ thống cửa hàng:
+                <br> <br>
+                | Hồ Chí Minh
+                <br> <br>
+                Quận 1
+                <br> <br>
+                + 325 Hoàng Sa, Phường Tân Định, Quận 1, HCM
+                <br> <br>
+                + The New Playground, 04 Phạm Ngũ Lão, Quận 1, HCM
+                <br> <br>
+                Quận 10
+                <br> <br>
+                + 842 Sư Vạn Hạnh, Phường 12, Quận 10, HCM
+                <br> <br>
+                | Cần Thơ
+                <br> <br>
+                + 54 Mậu Thân, phường Xuân Khánh, Quận Ninh Kiều, Thành Phố Cần Thơ.</h2>
+            <h2 class="part">HƯỚNG DẪN BẢO QUẢN</h2>
+            <h2>Mặc dù vấn đề chất lượng và độ bền màu của hình in đã được đơn vị sản xuất đảm bảo.
+                <br> <br>
+                Song nếu muốn kéo dài thời gian sử dụng cũng như giữ cho sản phẩm luôn đẹp mắt thì bạn nên có những cách bảo quản, giữ gìn và sử dụng bền lâu.
+                <br> <br>
+                Vì vậy New Clothes sẽ giới thiệu đến các bạn một số cách để bảo quản sản phẩm một cách tốt hơn:</h2>
+            <h1 style="margin-bottom: 30px;">1. Cách giặt</h1>
+            <h2>- Đối với sản phẩm mới lần đầu giặt, tụi mình khuyến khích giặt tay:
+                <br> <br>
+                + Lần giặt đầu tiên sau 5 ngày nhận sản phẩm và chỉ giặt bằng nước, không dùng bột giặt.
+                <br> <br>
+                + Giặt, sấy khô ở chế độ vừa, nhiệt độ nước dưới 30 độ
+                <br> <br>
+                + Phân loại đồ màu và đồ trắng trước khi giặt để tránh trường hợp lem màu từ quần áo này sang quần áo khác.
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                - Đối với sản phẩm đã sử dụng và các lần giặt tiếp theo:
+                <br> <br>
+                + Phân loại đồ màu và đồ trắng trước khi giặt để tránh trường hợp lem màu từ quần áo này sang quần áo khác.
+                <br> <br>
+                + Giặt bề trái bên trong của sản phẩm.
+                <br> <br>
+                + Giặt, sấy khô ở chế độ vừa, nhiệt độ nước dưới 30 độ
+                <br> <br>
+                + Tránh để bột giặt trực tiếp lên hình in hoặc cả bề mặt vải (Nên pha loãng trong nước trước khi bỏ áo vào).
+                <br> <br>
+                + Hạn chế ngâm lâu khi giặt sản phẩm.
+                <br> <br>
+                + Nói không với việc dùng thuốc tẩy.</h2> 
+            <h1 style="margin-bottom: 30px;">2. Cách phơi, sấy khô, ủi</h1>
+            <h2>- Không phơi trực tiếp dưới ánh mặt trời gắt, nên phơi vị trí thoáng mát, nắng dịu.
+                <br> <br>
+                - Phơi bằng bề trái bên trong của sản phẩm.
+                <br> <br>
+                - Không nên ủi nhiệt độ quá cao, chọn nhiệt độ vừa phải để tránh làm tổn hại bề mặt áo.
+                <br> <br>
+                - Không ủi trực tiếp lên bề mặt in hình của quần áo, hãy lộn ngược đồ lại ủi. Và tuyệt đối không ủi trực tiếp lên hình in trên áo.
+                <br> <br>
+                - Luồn mắc áo từ dưới thân áo khi treo để tránh giãn, rộng áo vùng cổ và vai.
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                Lưu ý:
+                <br> <br>
+                - Không nên để sản phẩm ở những nơi ẩm ướt. Bởi với tính chất thấm hút tốt, đặc biệt là vải cotton, sản phẩm dễ ẩm mốc, sẽ xuất hiện những vết mốc, vệt ố.
+                <br> <br>
+                - Nếu có vấn đề về cách bảo quản sản phẩm, bạn vui lòng liên hệ trực tiếp qua fanpage hoặc hotline New Clothes để được tụi mình hỗ trợ nhanh chóng nhé!</h2>
+        </div>
+    </div>   
+    <footer class="container-fluid footer">
+        <div class="col-md-7 link-text">
+            <div class="information col-md-4">
+                <h6>THÔNG TIN CÔNG TY</h6>
+                <li><a v-bind:href = "aboutUs">Giới thiệu về NEW CLOTHES </a></li>
+            </div>
+            <div class="support col-md-4">
+                <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="policyMembership">Chính sách Membership</a></li>
+                <li><a v-bind:href="guideOrders">Hướng dẫn mua hàng</a></li>
+                <li><a v-bind:href="policyTransport">Chính sách vận chuyển</a></li>
+                <li><a v-bind:href="policyReturnsWarranty">Chính sách đổi trả & bảo hành</a></li>
+            </div>
+            <div class="services col-md-4">
+                <h6>DỊCH VỤ KHÁCH HÀNG</h6>
+                <li><a v-bind:href="contactUs">Liên hệ chúng tôi</a></li>
+                <li><a v-bind:href="payments">Phương thức thanh toán</a></li>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="contact">
+                <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
+                <ul>
+                    <li><a v-bind:href="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a v-bind:href="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a v-bind:href="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+            <div class="sendMail">
+                <h6>ĐĂNG KÝ NHẬN EMAIL TỪ NEW CLOTHES</h6>
+                <div class="send col-md-12">
+                    <input type="email" class="value col-md-8" placeholder="Địa chỉ email của bạn" id="inputEmailFromCustomer">
+                    <input type="submit" value="ĐĂNG KÝ" class="submit col-md-4" id="submitEmailFromCustomer">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12"><p>
+            Copyright &copy;2022 by Tống Đức Duy | Lê Trung Kiên | Lê Bùi Minh Khoa
+        </p></div>
+    </footer>
+    <script src="../js/main.js" type="module"></script>
+</body>
+</html>

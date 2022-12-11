@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Chăm sóc khách hàng | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="./img/logo.png"/>
+    <script src="./vendor/vue.js"></script>
+    <link rel="stylesheet" href="./css/style_customerCare.css">
+    <link href="./fonts/AlumniSansPinstripe.css" rel="stylesheet">
+    <link href="./fonts/YanoneKaffeesatz.css" rel="stylesheet">
+    <link rel="stylesheet" href="./vendor/aos.css" />
+    <script src="./vendor/aos.js"></script>
+    <link rel="stylesheet" href="./css/style_main.css">
+    <link rel="stylesheet" href="./css/now-ui-dashboard.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    <div class="background_option" id="background_option">
+        <div class="background_virtual" @click="clickBGVirtual"></div>
+        <div class="mainOP" id="mainOP">
+            <div class="cart">
+                <div class="head">
+                    <h2>GIỎ HÀNG</h2>
+                    <h4 class="close" @click="clickClose">Đóng</h4>
+                </div>
+                <div class="list_item" id="list_item">
+    
+                </div>
+                <div class="pay">
+                    <main>
+                        <div class="info_bill">
+                            <div class="selected"><p>ĐÃ CHỌN:  </p> <p id="totalCount"></p></div>
+                            <div class="discount"><p>KHUYẾN MÃI:  </p> <p id="discountPercent"></p></div>
+                            <div class="total"><p>TẠM TÍNH:  </p> <p id="totalBill"></p></div>
+                        </div>
+                        <div class="btn"><h3 class="effect-for-btn">THANH TOÁN</h3></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="areaNavbar">
+        <div class="navb">
+            <div class="top">
+                <img src="./img/New Clothes.gif" alt="" class="leftNav">
+                <h2 class="centerNav"><a href="./index.html">new clothes</a></h2>
+                <div class="rightNav">
+                    <div class="rightNav-left">
+                        <div class="areaSearch">
+                            <div class="search">
+                                <input type="text" placeholder="Tìm kiếm" id="content">
+                                <li class="searchbutton" @click="onClick"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="rightNav-right">
+                        <ul class="option" id="option">
+                            <li @click="clickProfile" id="buttonProfile"><i class="now-ui-icons users_single-02"></i></li>
+                            <li @click="clickCart"><i class="now-ui-icons shopping_basket"></i><span id="countCart">0</span></li>
+                            <li @click="clickLogout" id="buttonLogout"><i class="now-ui-icons arrows-1_share-66"></i></li>
+                        </ul>
+                        <span id="nameAccount"></span>
+                    </div>
+                </div>
+               
+            </div>
+            <ul class="menu" id="menu">
+                <li ><a v-bind:href="aboutUs">Về chúng tôi</a></li>
+                <li><a v-bind:href="shop">Cửa hàng</a></li>
+                <li><a v-bind:href="sale">Giảm giá</a></li>
+                <li><a v-bind:href="collection">Bộ sưu tập</a></li>
+                <li><a v-bind:href="blog">Blog</a></li>
+                <li><a v-bind:href="contactUs">Liên hệ</a></li>
+                <li><a v-bind:href="customerCare" id="currentOpen">Chăm sóc khách hàng</a></li>
+            </ul>
+        </div>
+    </div>   
+
+    <div class="currentpath" data-aos="fade-left">
+        <a href="./index.html">Trang chủ</a>
+        <a href="" id="current">Chăm sóc khách hàng</a>
+    </div>
+    <div id="toast"></div>
+    <div class="Noidung">
+        <h1 data-aos="fade-left">CHĂM SÓC KHÁCH HÀNG</h1>
+        <div class="TieuDe">
+            <div class="Colum-item ft1" data-aos="fade-up">
+                <div class="CS1"> <a href="./customerCare/newClothes.html">New CLothes</a> </div>
+                <div class="CS1"> <a href="./customerCare/policyMembership.html">Chính sách Membership</a> </div> 
+                <div class="CS1"> <a href="./customerCare/QNA.html">Q &. A</a> </div>
+            </div>
+            <div class="bf"></div>
+            <div class="Colum-item ft2" data-aos="fade-up">
+                <div class="CS2"> <a href="./customerCare/serviceOrders.html">Dịch vụ mua hàng</a> </div>
+                <div class="CS2"> <a href="./customerCare/policyTransport.html">Chính sách vận chuyển</a> </div>
+            </div>
+            <div class="af"></div>
+            <div class="Colum-item ft3" data-aos="fade-up">
+                <div class="CS3"> <a href="./customerCare/policyReturnsWarranty.html">Chính sách đổi trả & bảo hành</a> </div>
+                <div class="CS3"> <a href="./customerCare/guideOrders.html">Hướng dẫn mua hàng & bảo quản</a> </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>

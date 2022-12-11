@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>QUẢN TRỊ | NEW CLOTHES</title>
+    <link rel="shortcut icon" type="image/png" href="../img/logo.png"/>
+    <script src="../vendor/vue.js"></script>
+    <link rel="stylesheet" href="../css/style_dashboard.css">
+    <link href="../fonts/AlumniSansPinstripe.css" rel="stylesheet">
+    <link href="../fonts/YanoneKaffeesatz.css" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/aos.css" />
+    <script src="../vendor/aos.js"></script>
+    <link rel="stylesheet" href="../css/now-ui-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div id="loader">
+        <div class="groupDot">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <div id="head"></div>
+    <a href="#head" class=" scrollToTop effect-for-btn" id="scrollToTop"><i class="fa-solid fa-angles-up"></i></a>
+    
+    <!-- For Delivery -->
+    <div id="optionCustom_2" class="optionCustom">
+        <li id="detailDelivery" class="optionCustom_2"><i class="fa-solid fa-circle-info"></i><span>Chi tiết</span></li>
+    </div>
+    <!-- For account -->
+    <div id="optionCustom_0" class="optionCustom">
+        <li id="lockCustomer" class="optionCustom_0"><i class="fa-solid fa-x"></i><span>Khóa</span></li>
+        <li id="unlockedCustomer" class="optionCustom_0"><i class="fa-solid fa-check"></i><span>Mở khóa</span></li>
+    </div>
+    <!-- For product -->
+    <div id="optionCustom_1" class="optionCustom">
+        <li id="modifyProduct" class="optionCustom_1"><i class="fa-solid fa-pen-to-square"></i><span>Chỉnh sửa</span></li>
+        <li id="deleteProduct" class="optionCustom_1"><i class="fa-solid fa-trash-can"></i><span>Xóa</span></li>
+    </div>
+
+    <div id="toast">
+    </div>
+
+    <div id="tab"></div>
+    <div class="page">
+        
+        <div class="contain">
+            <div class="leftPage" data-aos="fade-right">
+                <h1 class="titleHead">TÌNH HÌNH HOẠT ĐỘNG</h1>
+                <div class="buttonGroup">
+                    <div class="buttonTab onClickButton" id="btnProfile" aria-valuetext="0">
+                        <span>SỐ LIỆU THÔNG KÊ</span>
+                    </div>
+                    <div class="buttonTab" aria-valuetext="1">
+                        <span>QUẢN LÝ ĐƠN HÀNG</span>
+                    </div>
+                    <div class="buttonTab" aria-valuetext="2">
+                        <span>QUẢN LÝ SẢN PHẨM</span>
+                    </div>
+                    <!-- <div class="buttonTab onClickButton" aria-valuetext="2">
+                        <span>QUẢN LÝ NHÂN VIÊN</span>
+                    </div> -->
+                    <div class="buttonTab" aria-valuetext="3">
+                        <span>QUẢN LÝ NGƯỜI DÙNG</span>
+                    </div>
+                </div>
+                <div id="buttonGroup">
+                    <a href="../index.html" class="buttonTab">TRỞ VỀ TRANG CHỦ</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="rightPage" data-aos="zoom-in">
+            <h1 class="titleHead titleView">SỐ LIỆU THÔNG KÊ</h1>
+            <div id="statistics" class="viewChild">
+                <div class="part">
+                    <div class="overView">
+                        <div class="graphBox">
+                            <div class="box">
+                                <canvas id="earning"></canvas>
+                            </div>
+                        </div>
+                        <div class="dataNumber">
+                            <select name="" id="timeStatistics" class="box">
+                                <option value="0">Tất cả</option>
+                                <option value="1">Hôm nay</option>
+                                <option value="2">Hôm qua</option>
+                                <option value="3">7 ngày trước</option>
+                                <option value="4">Trong tháng</option>
+                                <option value="5">Trong năm</option>
+                                <option value="6">Tháng trước</option>
+                                <option value="7">Năm trước</option>
+                                
+                            </select>
+                            
+                            <div class="box">
+                                <div class="contentBox">
+                                    <div class="leftBox">
+                                        <h2 id="sold">1700</h2>
+                                        <span>ĐÃ BÁN</span>
+                                    </div>
+                                    <i class="now-ui-icons shopping_cart-simple rightBox"></i>
+                                </div>
+                                
+                            </div>
+                            <div class="box">
+                                <div class="contentBox">
+                                    <div class="leftBox">
+                                        <h2 id="profit">1700</h2>
+                                        <span>DOANH THU - VNĐ</span>
+                                    </div>
+                                    <i class="now-ui-icons business_money-coins rightBox"></i>
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="overView">
+                        <div class="rankProfit">
+                            <div class="titleCol">
+                                <span class="name">TÊN SẢN PHẨM</span><span class="sold">Đã bán</span><span class="profits">DOANH THU</span>
+                            </div>
+                            <div id="rankProfit-body">
+                            </div>
+                        </div>
+                        <div class="dataNumber">
+                            
+                            <select name="" id="typeProduct" class="box">
+                                <option value="0">Tất cả</option>
+                                
+                            </select>
+                            
+                            
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="statusDelivery viewChild">
+                <div class="note">
+                    <i class="now-ui-icons business_bulb-63"></i>
+                    <span>Nhấn chuột phải vào kiện hàng để xem chi tiết</span>
+                </div>
+                <div class="filter" data-aos="fade-left">
+                    <input type="date" id="optionDateFrom">
+                    <span>-</span>
+                    <input type="date" id="optionDateTo">
+                    <span id="addFilter">LỌC</span>
+                </div>
+                <div class="titleCol" data-aos="fade-left">
+                    <span class="idDelivery">Mã kiện hàng</span><span class="dateDelivery">Ngày đặt</span><span class="valueDelivery">Tổng tiền</span><span class="statusDelivery">Trạng thái</span>
+                </div>
+                <div id="delivery-body">
+                    <!-- <div class="delivery">
+                        <span class="idDelivery">1</span>
+                        <span class="dateDelivery">17/11/2022</span>
+                        <span class="valueDelivery">370000</span>
+                        <select name="" class="statusDelivery" >
+                            <option value="0">Chưa xử lý</option>
+                            <option value="1">Đã xử lý</option>
+                        </select>
+                    </div> -->
+                </div>
+            </div>
+            <div class="storage viewChild" >
+                <div class="note">
+                    <i class="now-ui-icons business_bulb-63"></i>
+                    <span>Nhấn chuột phải vào sản phẩm để tùy chỉnh</span>
+                </div>
+                <div class="btnAdd " id="btnAdd">
+                    <div class="content-btn">
+                        <li><i class="fa-solid fa-plus"></i></li>
+                    </div>
+                </div>
+                <div class="groupOption">
+                    
+                    <select name="" class="box" id="comboType">
+                        
+                    </select>
+                    <select name="" class="box" id="comboStatus">
+                        <option value="0">Tất cả</option>
+                        <option value="1">CÒN HÀNG</option>
+                        <option value="2">SẮP HẾT</option>
+                        <option value="3">HẾT HÀNG</option>
+                    </select>
+                    <div class="box">
+                        <div class="contentBox">
+                            <div class="leftBox">
+                                <h2 id="amountOfProduct">0</h2>
+                                <span>SẢN PHẨM</span>
+                            </div>
+                            <i class="now-ui-icons shopping_shop rightBox"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="titleCol">
+                    <span class="idProduct">ID</span><span class="imgProduct">Hình ảnh</span><span class="nameProduct">Tên sản phẩm</span><span class="colorProduct">Màu sắc</span><span class="countProduct">Số lượng</span><span class="priceProduct">Đơn giá</span><span class="statusProduct">Trạng thái</span>
+                </div>
+                <div id="storage-body"></div>
+
+            </div>
+            
+            <!-- <div class="manageStaff viewChild" id="manageStaff">
+                <div class="titleCol">
+                    <span id="idAccount">ID</span>
+                    <span id="nameAccount">Họ và tên</span>
+                    <span id="usernameAccount">Tên đăng nhập</span>
+                    <span id="passwordAccount">Mật khẩu</span>
+                    <span id="statusAccount">Trạng thái</span>
+                </div>
+            </div> -->
+            
+            <div class="manageCustomer viewChild">
+                <div class="note">
+                    <i class="now-ui-icons business_bulb-63"></i>
+                    <span>Nhấn chuột phải vào tài khoản để tùy chỉnh</span>
+                </div>
+                <div class="areaNumberAboutAccounts">
+                    <div class="box">
+                        <div class="contentBox">
+                            <div class="leftBox">
+                                <h2 id="amountOfAccount">0</h2>
+                                <span>TÀI KHOẢN</span>
+                            </div>
+                            <i class="now-ui-icons business_badge rightBox"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="contentBox">
+                            <div class="leftBox">
+                                <h2 id="amountunlockedAccount">0</h2>
+                                <span>TK HOẠT ĐỘNG</span>
+                            </div>
+                            <i class="now-ui-icons ui-1_lock-circle-open rightBox"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="contentBox">
+                            <div class="leftBox">
+                                <h2 id="amountlockedAccount">0</h2>
+                                <span>TK BỊ KHÓA</span>
+                            </div>
+                            <i class="now-ui-icons objects_key-25 rightBox"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="titleCol">
+                    <span class="idAccount">ID</span><span class="nameAccount">Họ và tên</span><span class="phoneAccount">SĐT</span><span class="emailAccount">Email</span><span class="usernameAccount">Tên đăng nhập</span><span class="passwordAccount">Mật khẩu</span><span class="statusAccount">Trạng thái</span>
+                </div>
+                <div id="manageCustomer-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/dashboard.js" type="module"></script>
+</body>
+</html>

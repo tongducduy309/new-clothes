@@ -1,0 +1,284 @@
+body{
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+span{
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+.page{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.leftPage{
+    width: 20%;
+    height: 100%;
+    background-color: #1b1b1b;
+    
+
+
+}
+.rightPage{
+    width: 80%;
+    height: 100%;
+    background-color: #efefef;
+    color: #747474;
+    
+}
+.titleHead{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #fff;
+}
+.buttonGroup{
+    color: #fff;
+    height: 80%;
+    width: 100%;
+
+}
+
+.buttonTab{
+    margin: 0 20px;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 20px;
+    cursor: pointer;
+    display: block;
+}
+
+.rightPage>.titleHead{
+    color: #000;
+}
+
+.viewChild{
+    display: none;
+}
+
+#profile{
+    display: block;
+}
+
+#passwordCustomer{
+    font-size: 18px;
+}
+
+.contentTab{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+
+
+.contentTab>span{
+    font-size: 18px;
+    
+}
+
+.profile-body{
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
+    padding: 30px 50px;
+}
+
+.contentTab>.boxPassword>input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: right;
+    
+}
+
+.point{
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+    padding-top: 10px;
+}
+
+#togglePassword{
+    color: #000;
+    cursor: pointer;
+}
+
+.filterStatus{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    background-color: #fff;
+
+}
+.filterStatus>span{
+    flex:1;
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.filterStatus>span:hover{
+    color: #1b1b1b;
+}
+.selectFilter{
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+.cartCustomer{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.titleCol{
+    width: 100%;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px 0;
+}
+
+.cartCustomer span{
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    
+}
+.delivery{
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px 0;
+}
+.detailDelivery{
+    z-index: 1000;
+}
+.detailDelivery:hover{
+    color: #000;
+}
+
+#tab{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#tab>div{
+    position: fixed;
+    width: 800px;
+    height: 450px;
+    background-color: #fff;
+    z-index: 101;
+    border-radius: 10px;
+    
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
+    padding: 20px;
+
+}
+
+#tab .headTab{
+    position: relative;
+    height: 8%;
+}
+#tab .headTab>.title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+#tab .headTab>.closeTab{
+    position: absolute;
+    right: 10px;
+    color: #929292;
+    cursor: pointer;
+}
+
+.bodyTab{
+    display: flex;
+
+}
+
+.infoDelivery{
+    flex: 3;
+    padding-right: 10px;
+}
+.productsInDelivery{
+    flex: 7;
+    position: relative;
+}
+#tabDetailDelivery .titleCol span{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+}
+#listProductsInDelivery{
+    overflow-y: auto;
+}
+
+.productID{
+    display: block;
+    align-items: center;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+#listProductsInDelivery-body .idProductID{
+    width: 9%;
+    display: inline-block;
+}
+#listProductsInDelivery-body .nameProductID{
+    width: 40%;
+    display: inline-block;
+}
+#listProductsInDelivery-body .colorProductID{
+    width: 15%;
+    display: inline-block;
+}
+#listProductsInDelivery-body .countProductID{
+    width: 18%;
+    display: inline-block;
+}
+#listProductsInDelivery-body .priceProductID{
+    width: 18%;
+    display: inline-block;
+}
+
+#listProductsInDelivery-body span{
+    text-align: center;
+    font-size: 14px;
+}
+
+.productsInDelivery .value{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+#tabDetailDelivery{
+    border-top: 20px solid #000;
+    font-size: 16px;
+}
+
+.contentTab{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnCancelBill{
+    position: relative;
+    background-color: #d2d1d7;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.btnCancelBill:hover{
+    color: #fff;
+}
+
+
+
+
